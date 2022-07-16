@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/scroll-animate.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/sticky-sidebar.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <!-- Animate.css Page Transitions -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="import" href="/utilities/symbols.js" />
+    <title>About the WQ ToolBox+</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-3.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
+  </head>
+
+  <body class="animate__animated animate__fadeIn" id="body-scroll-animate">
+    <!-- navbar-wqmap -->
+    <div class="navbar-wqmap">
+      <div class="container-index flex">
+        <!-- "...utility class of flex..."-->
+        <h3 class="logo">
+          <a href="index.html">The WQ ToolBox<sup>+</sup></a>
+        </h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="tldr.html">tl;dr</a></li> -->
+            <li title="The WQ Map">
+              <a href="scroll-wqmap.html"
+                ><i class="fas fa-map-marker-alt"></i
+              ></a>
+            </li>
+            <li title="The WQ ToolBox">
+              <a href="scroll-wqtoolbox.html"><i class="fa fa-tools"></i></a>
+            </li>
+            <li title="The WQ Manual">
+              <a href="scroll-wqmanual.html"><i class="fa fa-book"></i></a>
+            </li>
+            <li style="margin-top: 0.25rem" title="ML & RAS">
+              <a href="ml-and-the-wq-map.html"><img
+                class="ml-img"
+                id="ml-icon"
+                style="border-radius: 2px; box-shadow: none; background-color: #e5e2e2; width: 1.0rem;"
+                src="/images/deep-learning.png"
+                alt="machine learning"
+              /></a>
+            </li>
+            <li>
+              <a class="selectedNavMenu" href="#">About...</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- HEAD -->
+    <!-- added new equations-to-WQ Map image -->
+    <section class="what-is-and-bullets">
+      <!-- <section class="docs-head bg-secondary py-3"> -->
+      <div class="container-index grid-for-scroll-pages">
+        <article>
+          <h1 class="section-title">About the<br />WQ ToolBox<sup>+</sup></h1>
+          <!-- <p class="lead">Learn how to use the WQ Calc Platform</p> -->
+        </article>
+        <img
+          id="img-about-showcase"
+          src="/images/about-eqns-to-map.png"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- DOCS MAIN -->
+    <main class="wrapper">
+      <div class="sidebar">
+        <div class="card bg-light p3" id="essentials-and-deployment">
+          <h3>The Basics</h3>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  class="text-primary"
+                  href="#tl;dr"
+                  title="too long; didn&#39;t read"
+                  >tl;dr</a
+                >
+              </li>
+              <li>
+                <a class="text-primary" href="#wq-toolbox-plus"
+                  >The WQ ToolBox<sup
+                    style="color: rgb(160, 137, 7); font-weight: 700"
+                    >+</sup
+                  ></a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <h3 style="margin-top: 1.25rem">A Bit More</h3>
+          <nav>
+            <ul>
+              <!-- <li>
+                <a class="text-primary" href="#">Boilerplate</a>
+              </li> -->
+              <li>
+                <a class="text-primary" href="#the-motivation"
+                  >The Motivation</a
+                >
+              </li>
+              <li>
+                <a class="text-primary" href="#the-mission">The Mission</a>
+              </li>
+              <li>
+                <a class="text-primary" href="#the-vision">The Vision</a>
+              </li>
+              <li>
+                <a class="text-primary" href="#the-origin">The Origin</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <small id="tl;dr"></small>
+      <div class="main-content">
+        <h2>Just the Basics</h2>
+        <div class="about-tldr-bullets">
+          <h3 style="padding-left: 0.5rem">tl;dr</h3>
+          <ul class="tl-dr-list">
+            <li>
+              Water-quality (<strong class="emphasize-wq-app-name">WQ</strong>) management is at the heart of
+              all successful aquaculture.
+            </li>
+            <li>
+              Controlling WQ involves a complicated set of chemical tasks that
+              makes or breaks a project.
+            </li>
+            <li>
+              This is a very common pain-point for aquaculturists, especially in
+              sustainable recirc systems.
+            </li>
+
+            <li>
+              The
+              <span class="emphasize-wq-app-name">WQ ToolBox</span
+              ><sup style="color: rgb(150, 130, 18); font-weight: bold">+</sup>
+              software saves aquaculturists time, money, & misery by making
+              precision WQ control as simple as using Google Maps<sup
+                ><small>TM</small></sup
+              >. 
+
+              <small id="wq-toolbox-plus"></small>
+            </li>
+          </ul>
+        </div>
+
+        <h3>
+          <span class="emphasize-wq-app-name">The WQ ToolBox</span><sup style="color: rgb(160, 137, 7); font-weight: 700; font-size:1.15rem;"
+            >+</sup
+          >
+        </h3>
+
+        <div class="alert alert-primary">
+          <i class="fas fa-check"></i>Software tools to control water chemistry
+          in recirc systems
+        </div>
+
+        <p>
+          The <span class="emphasize-wq-app-name">WQ ToolBox</span
+          ><sup style="color: rgb(150, 130, 18); font-weight: bold">+</sup>
+          package bundles three apps:
+        </p>
+
+        <ul class="tl-dr-list list-checkmarks-wqmap-about">
+          <!-- <ul class="tl-dr-list list-checkmarks-wqmap"> -->
+          <!-- <ul class="list-display list-checkmarks-wqmap"> -->
+
+          <!-- <li>
+            <strong>The Water Quality Map</strong> -- manage water chemistry as
+            easily as using Google Maps<sup><small>TM</small></sup>
+          </li> -->
+          <a href="scroll-wqmap.html">
+            <li>
+              <strong class="emphasize-wq-app-name">The Water Quality Map</strong> -- makes water-quality
+              wizards out of water-quality muggles
+            </li>
+          </a>
+        </ul>
+
+        <ul class="tl-dr-list list-checkmarks-wqtoolbox-about">
+          <a href="scroll-wqtoolbox.html">
+            <li>
+              <stron class="emphasize-wq-app-name"g>The Water Quality ToolBox</stron> -- streamlines routine
+              work-flow with enhanced <em>aquaCalc</em> tools
+            </li>
+          </a>
+        </ul>
+
+        <ul class="tl-dr-list list-checkmarks-wqmanual-about">
+          <a href="scroll-wqmanual.html">
+            <li>
+              <strong class="emphasize-wq-app-name">The Water Quality Manual</strong> -- upgrades your
+              aquaculture aptitude with interactvie training
+            </li>
+          </ul>
+          </a>
+        <p>
+          Designed from first-hand experience, the
+          <span class="emphasize-wq-app-name">WQ ToolBox</span
+          ><sup style="color: rgb(150, 130, 18); font-weight: bold">+</sup>
+          empowers aquaculturists to solve water-chemistry problems that
+          naturally arise in the course of raising a crop, regardless of the
+          target species.
+        </p>
+
+        <p>
+          <strong style="font-size: 1.15rem; margin-bottom: 0;">To learn more about each app...</strong>
+        </p>
+
+        <ul style="list-style: circle; margin-top: 0; margin-left: 2rem;">
+          <li>click its icon in the list above or in the navigation bar</li>
+          <li>or tap the
+            <em style="font-weight: 300">Learn more...</em> button in its section of the 
+            <span class="scroll-animate-card" style="display: inline"
+              ><a href="index.html" alt="home page">Home page</a></span
+            >
+          </li>
+        </ul>
+
+        <small id="the-motivation"></small>
+
+        <hr style="margin: 1.5rem; width: 60%; margin: 2rem auto" />
+
+        <h2 style="margin-top: 2rem">A Bit More</h2>
+        <h3 id="the-motivation">The Motivation</h3>
+
+        <div class="alert alert-primary">
+          <i class="fas fa-check"></i>Water is the life-blood of all aquatic
+          systems
+        </div>
+
+        <p>
+          Water is the life-blood of all aquatic systems, whether natural
+          (oceans, lakes, estuaries), recreational (home aquaria, pools &amp;
+          spas), or designed for seafood production (aquaculture, aquaponics,
+          hydroponics).
+        </p>
+        <p>
+          In aquaculture, poor water quality leads to poor crops...and poor
+          crops lead to poor profits.
+        </p>
+        <p>
+          That’s simple enough to understand, but what’s <em>not</em> so simple
+          to understand is the chemistry and math needed to maintain healthy
+          culture water over a crop cycle.
+        </p>
+        <p>
+          That’s especially true in recirculating aquaculture systems
+          (<strong class="emphasize-wq-app-name">RAS</strong>) which do not flush water-quality problems to
+          the environment but must tackle them head-on within the culture unit.
+        </p>
+
+        <small class="emphasize-wq-app-name" id="the-mission"></small>
+        <p>
+          Sustainability is even more challenging in true water-reuse systems:
+          Water chemistry must be managed with precision to maintain a healthy
+          culture environment over multiple consecutive crop cycles.
+        </p>
+        <p>
+          That's a tech barrier that must be lowered if local production of
+          sustainable seafood is to be expanded.
+        </p>
+
+        <p>
+          <!-- To advance sustainable ... -->
+        </p>
+
+        <!-- -------- The Mission -------- -->
+
+        <h3 class="about-sub-heading">The Mission</h3>
+
+        <div class="alert alert-primary">
+          <i class="fas fa-check"></i>Develop tools that take the 'tech' out of
+          managing aquaculture water chemistry
+        </div>
+
+        <p>
+          The mission is to accelerate local production of sustainable seafood
+          by equipping small-scale aquaculture entrepreneurs with the training
+          &amp; tools they need to manage water chemistry in multi-crop recirc
+          systems.
+          <small class="emphasize-wq-app-name" id="the-vision"></small>
+        </p>
+
+        <p>
+          <small>
+            The mission supports two
+            <span class="scroll-animate-card" style="display: inline"
+              ><a
+                href="https://sdgs.un.org/goals"
+                target="_blank"
+                rel="noopener noreferrer"
+                >UN SDGs</a
+              ></span
+            >: <em>Sustainable Development of Marine Resources</em> (<span
+              class="scroll-animate-card"
+              style="display: inline"
+              ><a
+                href="https://sdgs.un.org/goals/goal14"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SDG 14</a
+              ></span
+            >) &amp; <em>Sustainable Production</em> (<span
+              class="scroll-animate-card"
+              style="display: inline"
+              ><a
+                href="https://sdgs.un.org/goals/goal12"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SDG 12</a
+              ></span
+            >).
+          </small>
+        </p>
+
+        <!-- -------- The Vision -------- -->
+
+        <h3 class="about-sub-heading">The Vision</h3>
+
+        <div class="alert alert-primary">
+          <i class="fas fa-check"></i>Enhance sustainable seafood production
+          with practical IMTA and ML
+        </div>
+
+        <p>
+          <small id="the-origin"></small>
+          The vision is to modify the software to (1) simplify control of an
+          Integrated Multi-Trophic Aquaculture (<strong class="emphasize-wq-app-name">IMTA</strong>) system
+          that lowers the CO<sub>2</sub>e footprint of current mono-species
+          recirc systems; (2)
+          <span class="scroll-animate-card" style="display: inline">
+            <a href="ml-and-the-wq-map.html"
+              >incorporate Machine Learning</a
+            ></span
+          >
+          (<strong class="emphasize-wq-app-name">ML</strong>) for WQ anomaly detection & enhancing the
+          <span class="emphasize-wq-app-name">Water Quality Map</span
+          >'s stoichiometric algorithm.
+        </p>
+
+        <!-- -------- SDGs ------- -->
+
+        <!-- <h3 class="about-sub-heading">SDGs</h3>
+
+        <div class="alert alert-primary">
+          <i class="fas fa-check"></i>The mission contributes to four UN Sustainable Development Goals (<strong>SDG</strong>s)
+        </div>
+
+        <small>
+          The mission supports two <span class="scroll-animate-card" style="display: inline"
+            ><a
+              href="https://sdgs.un.org/goals"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><em>UN SDG</em>s</a
+            ></span
+          >: SDG 14 -- Sustainable development of marine resources; SDG 12 -- sustainable production &amp; consumption.
+        </small>
+
+        
+
+        <ul>
+          <li>SDG 12: reduced waste discharge plus high-level biosecurity
+          contribute to responsible food production</li>
+          Substantially  (SDG 12: Ensure sustainable consumption and production patterns) and protection of
+          aquatic ecosystems (SDG 14: Conserve and sustainably use the oceans, seas and marine resources for sustainable development). Year-around availability of fresh seafood
+          enhances nutrition and well-being (SDG 3). Making recirc management
+          accessible to small-scale rural and urban farms builds sustainable
+          communities (SDG 11), diversifies local Income, and advances the
+          locavore trend among consumers.
+        </ul> -->
+
+        <!-- -------- The Origins ------- -->
+
+        <h3 class="about-sub-heading" id="the-origin">The Origin</h3>
+
+        <div class="alert alert-primary">
+          <i class="fas fa-check"></i>A stem-to-stern re-write inspired by the
+          old <em>aquaCalc</em> software
+        </div>
+
+        <p>
+          The
+          <span class="emphasize-wq-app-name">WQ ToolBox</span
+          ><sup style="color: rgb(150, 130, 18); font-weight: bold">+</sup>
+          project originally was intended to be a simple upgrade of the old
+          <span class="scroll-animate-card" style="display: inline"
+            ><a
+              href="https://drive.google.com/file/d/14hQ1ok5GExTL23aNS6xs3ezxvTFGwcdO/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><em>aquaCalc</em></a
+            ></span
+          >
+          software that no longer runs on modern operating systems. (The Windows
+          version, however, still runs on Windows 7 for anyone who wants to go
+          to the trouble of emulating that old OS on a modern Windows platform.)
+        </p>
+        <p>
+          Web technologies also have greatly advanced since that small desktop
+          app was released, and some of these (React, D3, MongoDB) have been
+          incorporated into the
+          <span class="emphasize-wq-app-name">WQ ToolBox</span
+          ><sup style="color: rgb(150, 130, 18); font-weight: bold">+</sup>
+          package to present a much richer user experience. (In comparison, the
+          old <em>aquaCalc</em> UI looks like something from the original
+          version of <em>The Simpsons</em>.)
+        </p>
+        <p>
+          The result is an entirely new set of software tools that broadens and
+          deepens the user's ability to manage aquaculture water quality.
+        </p>
+
+        <!-- -------- The Develper ------- -->
+
+        <small id="the-dev-guy"></small>
+
+        <h3 class="about-sub-heading" id="the-dev-guy">The Dev</h3>
+
+        <div class="alert alert-primary">
+          <i class="fas fa-check"></i>A bit about the developer
+        </div>
+
+        <p>
+          The
+          <span class="emphasize-wq-app-name">WQ ToolBox</span
+          ><sup style="color: rgb(150, 130, 18); font-weight: bold">+</sup> was
+          developed by Nick Staresinic. Some of his academic and professional
+          stops...
+        </p>
+        <ul style="font-size: 0.85rem; list-style: circle; padding: 0 1.5rem">
+          <li>
+            Ph.D., Biological Oceanography, MIT & The Woods Hole Oceanographic
+            Institution
+          </li>
+          <li>
+            NATO Post-doc, International Atomic Energy Agency's Marine
+            Radioactivity Lab, Monaco
+          </li>
+          <li>Ingénieur physicien, CNRS/CEA, Gif-sur-Yvette, France</li>
+          <li>
+            Visiting Investigator, Coastal Research Center, Woods Hole
+            Oceanographic Institution
+          </li>
+          <li>
+            Regional Coordinator in the W. Balkans,
+            <em>Releasing Development Potential at the Coast</em>, a Research
+            Council of Norway project with NTNU, SINTEF, & (pre-)NOFIMA
+          </li>
+          <li>
+            A stint at the former National Research Center for Cephalopods
+            (UTMB, Galveston) to learn <em>Sepia</em> culture methods
+          </li>
+          <li>
+            A couple months learning salmon cage culture off Caherdaniel, County
+            Kerry
+          </li>
+          <li>Taught Aquaculture Tech at Dubrovnik University, Croatia</li>
+          <li>
+            Aquaculture feasibility studies -- solo &amp; in teams -- in
+            Ecuador, Kenya, the US, & Croatia
+          </li>
+          <li>
+            Demo project restocking native Gulf of Mexico penæid juveniles in
+            Galveston, TX
+          </li>
+          <li>
+            Contributor, Tzachi Samocha's Elsevier book
+            <span class="scroll-animate-card" style="display: inline"
+              ><a
+                href="https://www.amazon.com/Sustainable-Biofloc-Systems-Marine-Shrimp/dp/0128180404/ref=sr_1_1?dchild=1&keywords=samocha+biofloc&qid=1617745959&sr=8-1&asin=B07WVBXQ1S&revisionId=&format=2&depth=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><strong
+                  >Sustainable Biofloc Systems for Marine Shrimp</strong
+                ></a
+              >.</span
+            >
+          </li>
+          <li>
+            Developed the old
+            <span class="scroll-animate-card" style="display: inline"
+              ><a
+                href="https://drive.google.com/file/d/14hQ1ok5GExTL23aNS6xs3ezxvTFGwcdO/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><em>aquaCalc</em></a
+              ></span
+            >
+            software with support of TAMU Sea Grant
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <article>
+        <nav>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="tldr.html">tl;dr</a></li> -->
+            <li>
+              <a class="selectedNavMenu" href="about.html">About...</a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+      <p>&copy; 2022 --Nick/ Staresinic</p>
+    </footer>
+
+    <!-- see: https://github.com/michalsnik/aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 140,
+        duration: 850,
+      });
+    </script>
+  </body>
+</html>

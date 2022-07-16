@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/real-highlight.css" />
+    <link rel="stylesheet" href="/css/scroll-animate.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Animate.css Page Transitions -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>The WQ ToolBox+</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-3.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
+  </head>
+
+  <body
+    class="animate__animated animate__fadeIn"
+    id="body-scroll-animate"
+    style="background-color: var(--color-gray-100)"
+  >
+    <!-- navbar-wqmap -->
+    <div class="navbar-wqmap">
+      <div class="container-index flex">
+        <h3 class="logo">
+          <a href="index.html">The WQ ToolBox<sup>+</sup></a>
+        </h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li title="The WQ Map">
+              <a href="scroll-wqmap.html"
+                ><i class="fas fa-map-marker-alt"></i
+              ></a>
+            </li>
+            <li title="The WQ ToolBox">
+              <a class="selectedNavMenu" href="#"
+                ><i class="fa fa-tools"></i
+              ></a>
+            </li>
+            <li title="The WQ Manual">
+              <a href="scroll-wqmanual.html"><i class="fa fa-book"></i></a>
+            </li>
+            <li style="margin-top: 0.25rem" title="ML & RAS">
+              <a href="ml-and-the-wq-map.html"
+                ><img
+                  class="ml-img"
+                  id="ml-icon"
+                  style="
+                    border-radius: 2px;
+                    box-shadow: none;
+                    background-color: #e5e2e2;
+                    width: 1rem;
+                  "
+                  src="/images/deep-learning.png"
+                  alt="machine learning"
+              /></a>
+            </li>
+            <li>
+              <a href="about.html">About...</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- HEAD -->
+    <section class="what-is-and-bullets">
+      <!-- <section class="docs-head bg-secondary"> -->
+      <div class="container-index grid-for-scroll-pages">
+        <article>
+          <span class="fa-stack fa-lg">
+            <!-- <i class="fa fa-tools fa-stack-2x" id="wqmap-marker-stacked"></i> -->
+            <!-- <i
+              class="fa fa-water fa-stack-2x text-danger"
+              id="wqmap-water-stacked"
+            ></i> -->
+          </span>
+          <i class="fa fa-tools fa-md fa-stack-2x wq-icon-for-scroll-page"></i>
+
+          <h1 class="section-title">
+            What is the<br /><span>WQ ToolBox</span>?
+          </h1>
+          <p class="lead">time-saving software tools for aquaculture</p>
+        </article>
+        <div>
+          <div class="wqtoolbox-bullets">
+            <ul class="list-display list-checkmarks">
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  The WQ ToolBox is like a regular toolbox </span
+                ><span class="bullet-sub-text"
+                  >, but instead of ratchets, screwdrivers, &amp; pliers to work
+                  on <em>This Old House</em>, it has converters, calculators,
+                  &amp; interactive visualizations to work on
+                  <em>This Old RAS</em>.</span
+                >
+              </li>
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  The WQ ToolBox hides all tech details under the hood </span
+                ><span class="bullet-sub-text"
+                  >, so there's no barrier for users who are unfamiliar with
+                  natural water chemistry and/or math.</span
+                >
+              </li>
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  The WQ ToolBox saves time </span
+                ><span class="bullet-sub-text"
+                  >that can be devoted to animal husbandry, maintenance, routine
+                  cleaning, &amp; the many other tasks that go into raising a
+                  successful crop.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="scroll-animate-container">
+      <section class="scroll-animate-card">
+        <h3 class="h3-above-img">Quickly View Critical Data</h3>
+        <img src="images/snapshot.png" alt="Fourth image" />
+        <div>
+          <h3>Quickly View Critical Data</h3>
+          <p style="margin-bottom: 0">
+            The <span class="wq-toolbox-highlight">WQ Snapshot</span> displays
+            <span class="realistic-marker-highlight"
+              >four key RAS properties</span
+            >...
+          </p>
+          <ul>
+            <li>
+              ...dissolved oxygen (<strong>O<sub>2</sub></strong
+              >)
+            </li>
+            <li>
+              ...carbon dioxide (<strong>CO<sub>2</sub></strong
+              >)
+            </li>
+            <li>...un-ionized ammonia-nitrogen (<strong>UIA-N</strong>)</li>
+            <li>...carbonate saturation state, omega (<strong>Ω</strong>)</li>
+          </ul>
+          <p>
+            <span class="realistic-marker-highlight"
+              >A variety of units reduces the need for conversions</span
+            >
+            and visual cues indicate
+            <span style="font-weight: 700; color: green">safe</span>,
+            <span style="font-weight: 700; color: #d1b91b"> warning</span>,
+            &amp;
+            <!-- <span style="font-weight: 700; color: #edcf18"> warning </span> -->
+            <!-- , &amp; -->
+            <span style="font-weight: 700; color: red">danger</span>
+            levels.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Un-ionized Ammonia</h3>
+        <img src="images/uian.png" alt="Fifth image" />
+        <div>
+          <h3>Un-ionized Ammonia</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >UIA-N is toxic to aquatic animals at microgram/L levels.</span
+            >
+          </p>
+          <p>
+            This <span class="wq-toolbox-highlight">WQ ToolBox</span> tool's
+            Cæsar's Thumb clearly tells you if your water is good-to-go (<i
+              class="fas fa-thumbs-up"
+              style="color: green; font-size: 0.95rem"
+            ></i
+            >) or not (<i
+              class="fas fa-thumbs-down"
+              style="color: red; font-size: 0.95rem"
+            ></i
+            >) according to your species's critical UIA-N threshold.
+          </p>
+          <p>But that's not enough for precision RAS management.</p>
+          <p>
+            The tool is enhanced to quantify &amp; plot your culture water's
+            state relative to the
+            <span style="font-weight: 700; color: red">UIA-N Danger Zone</span>.
+          </p>
+          <!-- <a href="#" class="btn">Buy now</a> -->
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Enhanced Unit Conversions</h3>
+        <img src="/images/convert.png" alt="First image" />
+        <div>
+          <h3>Enhanced Unit Conversions</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Unit conversions are a time-consumng pain</span
+            >
+            that slows the routine aquaculture work-flow.
+          </p>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ ToolBox</span> performs
+            common (length-area-volume) and
+            <span class="realistic-marker-highlight"
+              >aquaculture-releated conversions quickly &amp; accurately</span
+            >
+            in both metric &amp; English units.
+          </p>
+          <p>
+            Biomass &amp; abundance are converted between
+            <em>per-unit-area</em> and <em>-volume</em>. Composite quantities
+            (<em>e.g.</em>
+            Hydraulic Load Rate &amp; Flow Rate) may be calculated &amp;
+            converted in a single operation.
+          </p>
+          <!-- <a href="#" class="btn">Buy now</a> -->
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Gas Conversions</h3>
+        <img src="/images/gasConvertDetailed.png" alt="First image" />
+        <div>
+          <h3>Gas Conversions</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Unit conversions of dissolved gasses can prove confusing.</span
+            >
+          </p>
+          <p>
+            Part of the confusion comes from converting between units of
+            concentration and units of pressure (tension).
+          </p>
+          <p>
+            Pressure units are preferred: It is
+            <span class="realistic-marker-highlight"
+              >the pressure gradient, not the concentration gradient, that
+              drives respiration.</span
+            >
+          </p>
+          <p>
+            Additionally, because some aquaculturists do not measure dissolved
+            CO₂, this tool optionally will estimate it from pH, alkalinity,
+            temperature, &amp; salinity.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Mixing Water Masses</h3>
+        <img src="/images/mixing.png" alt="First image" />
+        <div>
+          <h3>Mixing Water Masses</h3>
+          <p>
+            The need to mix water types arises when preparing the culture
+            environment & when
+            <span class="realistic-marker-highlight"
+              >adding water lost from evaporation</span
+            >.
+          </p>
+
+          <p>
+            Mixing temperature, salinity, alkalinity, & TA-N is simple: Multiply
+            the property by the water type's fractional contribution to the
+            final volume, then add all terms.
+          </p>
+          <p>
+            pH is more complicated because
+            <span class="realistic-marker-highlight"
+              >buffering affects the final level of pH-dependent
+              properties</span
+            >, such as UIA-N.
+          </p>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ ToolBox</span> handles
+            that complication (and more) to perform this aquaculture task
+            quickly & accurately.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">The Fate of Feed</h3>
+        <img src="images/feedFlow.png" alt="Third image" />
+        <div>
+          <h3>The Fate of Feed</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Feed fuels growth -- but it also degrades water quality.</span
+            >
+            <!-- Feed drives stock growth & impacts the quality of culture water. -->
+          </p>
+          <p style="margin-bottom: 0">When aquatic animals feed, they...</p>
+          <ul>
+            <li>...increase TA-N by excretion</li>
+            <li>...increase CO₂ by respiration</li>
+            <li>...decrease O₂, also by respiration</li>
+            <li>...increase solid waste by egestion</li>
+          </ul>
+          <p>
+            This <span class="wq-toolbox-highlight">WQ ToolBox</span> tool helps
+            users
+            <span class="realistic-marker-highlight"
+              >anticipate the effects of feeding</span
+            >
+            on water quality. (It also is used by the
+            <span class="wq-toolbox-highlight">WQ Map</span> to plot the
+            feed-effect vector.)
+          </p>
+          <!-- <a href="#" class="btn">Buy now</a> -->
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Total Gas Pressure (<strong>TGP</strong>)</h3>
+        <img src="images/tgp.png" alt="Total Gas Pressure" />
+        <div>
+          <h3>Total Gas Pressure (<strong>TGP</strong>)</h3>
+
+          <p>
+            <span class="realistic-marker-highlight"
+              >TGP is the sum of the partial pressures of all dissolved
+              gasses</span
+            >, mainly N₂ & O₂, but also CO₂, argon, & water vapor.
+          </p>
+          <p>
+            When TGP exceeds barometric + hydrostatic pressure, culture water is
+            super-saturated. That exposes stock to
+            <span class="realistic-marker-highlight"
+              >Gas Bubble Disease (GBD) — the ‘bends’ of divers</span
+            >.
+          </p>
+          <p>
+            GBD reduces stock health and, when excessive or prolonged, can be
+            fatal.
+          </p>
+          <p>
+            This tool carries out the many calculations & conversions to
+            <span class="realistic-marker-highlight"
+              >solve TGP problems quickly & accurately.</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Gas Saturation</h3>
+        <img src="images/gasSat.png" alt="Gas Saturation" />
+        <div>
+          <h3>Gas Saturation</h3>
+          <p>
+            Gas saturation calculations play a role in system design, equipment
+            selection, & production ops.
+          </p>
+          <p>
+            This tool simplifies your work-flow by
+            <span class="realistic-marker-highlight"
+              >cutting through the cumbersome calculations to produce clear
+              results</span
+            >
+            in six concentration units &amp; seven pressure units.
+          </p>
+          <p>
+            Barometric pressure can be entered directly in common atmospheric
+            pressure units or estimated from altitude.
+          </p>
+          <p>
+            Water depth may be input when sub-surface gas saturation is a design
+            criterion.
+          </p>
+          <!-- <p>Gas concentration & tension are tablulated for quick reference.</p> -->
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Basic Tank Design</h3>
+        <img src="images/wq-tank-blueprints.png" alt="Basic Tank Design" />
+        <div>
+          <h3>Basic Tank Design</h3>
+          <p>
+            Users sometimes design their own DIY tanks for production or for a
+            variety of
+            <em>ad hoc</em> purposes.
+          </p>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ ToolBox</span> tank design
+            tool speeds up that process by
+            <span class="realistic-marker-highlight"
+              >calculating dimensions, bottom-cone angles, &amp; volumes</span
+            >
+            for tanks with circular, rectangular, &amp; oval geometries.
+          </p>
+          <p></p>
+          <p>
+            It also profiles water volume &amp; mass <em>vs.</em> fill-depth.
+          </p>
+          <p>
+            As with other tools, results may be expressed in a variety of common
+            metric &amp; English units without burdening the user with
+            performing explicit conversions.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">
+          Liquid Oxygen (<strong>LOX</strong>) Duration
+        </h3>
+        <img src="images/lox.png" alt="LOX Duration" />
+        <div>
+          <h3>Liquid Oxygen (<strong>LOX</strong>) Duration</h3>
+          <p>
+            The amount of time remaining in a LOX dewar (a specialized LOX tank)
+            is
+            <span class="realistic-marker-highlight"
+              >critically important when transporting stock to a production
+              facility or live-hauling to market.</span
+            >
+          </p>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ ToolBox</span>
+            uses LOX volume, flow rate, &amp; estimated dewar leakage to perform
+            that calculation.
+          </p>
+          <p>
+            Flow rate may be entered directly or computed using hauling-tank
+            volume and
+            <a
+              href="https://agrilife.org/fisheries2/files/2013/09/Pure-Oxygen-and-Live-Fish-Transport.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Wurts's recommendation</a
+            >.
+          </p>
+          <p>The result is displayed concisely at the top.</p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Heating Culture Water</h3>
+        <img src="images/heating.png" alt="Water Heating" />
+        <div>
+          <h3>Heating Culture Water</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Extending RAS production to seasonal climates requires heating
+              culture water</span
+            >
+            to insure good growth.
+          </p>
+          <p style="margin-bottom: 0">
+            This <span class="wq-toolbox-highlight">WQ ToolBox</span> tool takes
+            the confusion out of selecting a water heater and juggling
+            kilowatts, kilowatt-hours, BTUs, & BTUs/min. It estimates...
+          </p>
+          <ol>
+            <li>...the minimum power needed for heating</li>
+            <li>...the energy consumed during heating</li>
+            <li>...the heating expense to do the job</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Disinfection</h3>
+        <img src="images/disinfect.png" alt="Disinfection" />
+        <div>
+          <h3>Disinfection</h3>
+          <p>
+            Disinfection is a routine task in every production facility to
+            reduce the chance of a crop-damaging disease.
+          </p>
+          <p>
+            It's
+            <span class="realistic-marker-highlight"
+              >essential to use the correct disinfectant concentrations</span
+            >, and the calculation is simple enough.
+          </p>
+          <p>
+            This <span class="wq-toolbox-highlight">WQ ToolBox</span> tool
+            double-checks that you've prepared the correct concentration of the
+            working solution from the stock solution for the job at-hand.
+          </p>
+          <!-- <a href="#" class="btn">Buy now</a> -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <article>
+        <nav>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="tldr.html">tl;dr</a></li> -->
+            <li>
+              <a href="about.html">About...</a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+      <p>&copy; 2022 --Nick/ Staresinic</p>
+    </footer>
+
+    <svg
+      xmlns="//www.w3.org/2000/svg"
+      version="1.1"
+      class="svg-filters"
+      style="display: none"
+    >
+      <defs>
+        <filter id="marker-shape">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0 0.15"
+            numOctaves="1"
+            result="warp"
+          />
+          <feDisplacementMap
+            xChannelSelector="R"
+            yChannelSelector="G"
+            scale="30"
+            in="SourceGraphic"
+            in2="warp"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- see: https://github.com/michalsnik/aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // offset: 140,
+        duration: 650,
+      });
+    </script>
+  </body>
+</html>

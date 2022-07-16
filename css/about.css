@@ -1,0 +1,210 @@
+.about-image {
+  width: 520px;
+  margin: auto;
+  display: block;
+  border: 1px solid black;
+}
+
+/* Special for ML images */
+.about-image:hover,
+.about-image:active {
+  transform: scale(1);
+}
+
+.about-image-no-border {
+  width: 520px;
+  margin: auto;
+  display: block;
+}
+
+.about-icon-no-border {
+  width: 45px;
+  /* margin: auto;
+  display: block; */
+}
+
+.about-btn {
+  margin: 10px 10px;
+  padding: 8px 8px;
+  border-radius: 5px;
+}
+
+.about-btn:hover {
+  background: rgb(75, 71, 71);
+  color: cornsilk;
+}
+
+.about-btn span {
+  color: green;
+}
+.about-btn:hover span {
+  color: white;
+}
+
+.section-title {
+  margin: 15px 0;
+  /* [NB] Changed for "ML & The WQ Map" */
+  /* text-align: center; */
+}
+
+.section-title-test-problem {
+  /* margin: 40px 0 15px 0; */
+  padding-top: 8px;
+}
+
+.test-problem-heading-div {
+  margin: 40px 0 5px 0;
+  background-color: lightsteelblue;
+  border: 0.5px solid steelblue;
+  border-radius: 10px;
+  color: white;
+}
+
+.ml-heading-div {
+  width: 80%;
+  margin: 40px auto 5px auto;
+  /* background-color: #ececec; */
+  background-image: linear-gradient(rgb(28, 126, 214), rgb(21, 85, 146));
+  /* background-image: linear-gradient(rgb(21, 85, 146), rgb(28, 126, 214)); */
+  border: 0.5px solid steelblue;
+  border-radius: 10px;
+  /* color: #666; */
+  color: #ececec;
+  /* Use following in ML & WQ Map ?? */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style TOC icon on ML page */
+.ml-heading-div i {
+  text-decoration: none;
+  color: #fcfcf0;
+}
+
+.ml-heading-div i:hover {
+  transform: scale(1.12);
+  color: #f7f71f;
+}
+
+.ml-heading-div-blather {
+  margin: 0px 0 5px 0;
+  background-color: #ececec;
+  /* border: 0.5px solid steelblue;
+  border-radius: 10px; */
+  color: #666;
+}
+
+.ml-para-content-div {
+  /* border: 0.5px solid gray; */
+  /* background: #f6fbfc; */
+  /* border-radius: 10px; */
+  width: 80%;
+  margin: 0 auto 5px auto;
+  padding: 10px 10px;
+  /* text-align: center; */
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.75rem;
+}
+
+.ml-para-content p {
+  margin-bottom: 18px;
+}
+
+/* Style track-record list of ML applications */
+.ml-track-record-list {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: #ffffe0;
+  padding-top: 10px;
+  padding-left: 15px;
+  line-height: 1.75;
+}
+
+/* dotted green underline for Qin's "key" words in About/MLandWqMap */
+.dotted-underline {
+  border-bottom: 2.5px dotted green;
+  cursor: pointer;
+}
+
+.what-is-title {
+  margin-top: 20px;
+}
+
+.what-is-para {
+  padding: 0 15px;
+}
+
+.what-is-para-ul {
+  padding: 0 15px;
+  margin-bottom: 0px;
+}
+
+.list-item {
+  line-height: 1.95;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  margin-left: 20px;
+  font-style: italic;
+}
+
+.how-to-title {
+  margin-top: 18px;
+}
+
+.para-right {
+  /* margin: 0 10px; */
+  /* margin-top: 50px; */
+  text-align: left;
+}
+
+.para-left {
+  /* margin: 0 10px; */
+  /* margin-top: 50px; */
+  text-align: right;
+}
+
+/* see: https://bootstrapcreative.com/pattern/unordered-list-font-awesome-checkmark-bullets/ */
+.list-display li {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+.list-checkmarks {
+  padding-left: 1.5rem;
+}
+.list-checkmarks li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.list-checkmarks li:before {
+  font-weight: 900; /* NB: font-weight MUST be 900 see: https://stackoverflow.com/questions/47788847/font-awesome-5-font-family-issue */
+  font-family: "Font Awesome 5 Free";
+  content: "\f3c5";
+  margin: 0 10px 0 -22px;
+  color: blue;
+}
+
+.highlight-input-data {
+  color: blue;
+  font-weight: 550;
+}
+
+/* see: https://stackoverflow.com/questions/50444447/how-to-style-tooltip-of-bootstrap-4  */
+
+/* .tooltip {
+  width: 400px;
+} */
+
+.tooltip .tooltip-inner {
+  background-color: #181818;
+  /* color: yellow; */
+  color: #fffe7a;
+  /* color: #ffffe0; */
+  opacity: 1;
+  border: 1px solid lightgrey;
+}
+/* .tooltip.bs-tooltip-top > .arrow::before {
+  border-top-color: #fff;
+} */

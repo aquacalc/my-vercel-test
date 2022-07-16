@@ -1,0 +1,659 @@
+/* see: https://antoncodes.com/article/importing-font-awesome-into-nextjs */
+/* @import "@fortawesome/fontawesome-free/js/fontawesome";
+@import "@fortawesome/fontawesome-free/js/solid";
+@import "@fortawesome/fontawesome-free/js/regular";
+@import "@fortawesome/fontawesome-free/js/brands"; */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"); */
+
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* TOP SECTION with "What is...? & bullets */
+/* --------------------------------------- */
+/* --------------------------------------- */
+
+.what-is-and-bullets {
+  /* height: 33rem; */
+  /* height: 25rem; */
+  height: 30rem;
+  margin: 4rem auto 2rem auto;
+  /* background-color: var(--color-secondary-blue); */
+  background-image: linear-gradient(rgb(21, 85, 146), rgb(28, 126, 214));
+  /* background-image: linear-gradient(rgb(28, 126, 214), rgb(21, 85, 146)); */
+  color: rgb(245, 245, 245);
+  /* position: absolute;
+  top: 70px; */
+}
+
+.what-is-and-bullets-for-ml {
+  height: 33rem;
+  /* height: 25rem; */
+  margin: 4rem auto 2rem auto;
+  /* background-color: var(--color-secondary-blue); */
+  background-image: linear-gradient(rgb(21, 85, 146), rgb(28, 126, 214));
+  /* background-image: linear-gradient(rgb(28, 126, 214), rgb(21, 85, 146)); */
+  color: rgb(245, 245, 245);
+  /* position: absolute;
+  top: 70px; */
+}
+
+.what-is-and-bullets h1 {
+  font-size: 3.5rem;
+  /* width: 150%; */
+}
+
+.what-is-and-bullets p {
+  font-size: 1.75rem;
+  margin: 1.25rem 0;
+  font-style: italic;
+}
+
+/* Modify what-is-and-bullets grid from 50-50 -- Why important here? */
+.what-is-and-bullets .grid {
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-columns: 35% 65%; */
+  /* gap: 1.875rem; */
+}
+
+.what-is-and-bullets-text h1 {
+  animation: slideInFromLeft 2s ease-in-out;
+}
+
+.what-is-and-bullets-text p {
+  animation: slideInFromLeft 5s ease-in-out;
+}
+
+/* STACKED ICONS */
+#wqmap-marker-stacked {
+  font-size: 5rem;
+  bottom: 0.75rem;
+}
+
+#wqmap-water-stacked {
+  /* color: rgb(21, 85, 146); */
+  color: rgb(28, 126, 214);
+  /* color: rgb(31, 142, 179); */
+  font-size: 3rem;
+  left: 0.25rem;
+}
+
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+
+/* 20.8px */
+#body-scroll-animate {
+  /* font-size: 1.3rem; */
+  background-color: var(--color-gray-100);
+}
+
+.scroll-animate-container {
+  max-width: 1100px;
+  margin: auto;
+  overflow-x: auto;
+  /* 
+  [NB] WITHOUT next, on small screens (some) cards 
+       scroll y, after which cannot scroll whole screen;
+       also, animated cards are not centered if no overflow
+  */
+  overflow-y: hidden;
+  padding: 0 2rem;
+}
+
+.main-header {
+  margin-top: 5rem;
+  /* height: 46vh; */
+  /* height: 55vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding: 0rem; */
+}
+
+.main-header h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.main-header h2 {
+  font-size: 3rem;
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+
+.main-header h1 span {
+  color: var(--color-primary-600);
+}
+
+.main-header p {
+  font-size: 2rem;
+  color: var(--color-primary-300);
+}
+
+.wqtoolbox-bullets {
+  /* width: 60%; */
+  /* margin: 5rem auto 0 auto; */
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+}
+
+.bullet-sub-text {
+  font-size: 1.06rem;
+}
+
+img,
+.ml-img {
+  width: 90%;
+  height: auto;
+  border: 0.5px darkgray solid;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
+  transition: transform 0.5s ease-in;
+  position: static;
+}
+
+img:hover,
+img:active {
+  transform: scale(1.15);
+  /* position: absolute; */
+  /* top: 20;
+  left: 100; */
+}
+
+.ml-img:hover,
+.ml-img:active {
+  transform: scale(1);
+}
+
+#img-about-showcase {
+  transform: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 1rem auto;
+}
+
+/* STUDY THIS! */
+.scroll-animate-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1.618fr); */
+  /* grid-template-columns: 1.618fr 1fr; */
+  grid-gap: 0.25rem;
+  background-color: #fff;
+  /* background-color: #f1f1f1; */
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+
+.scroll-animate-card .h3-above-img {
+  display: none;
+}
+
+.scroll-animate-card h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.618rem; /* applying the golden ratio: ~26px vs. 16px*/
+  margin-bottom: 0.75rem;
+  color: var(--color-gray-600);
+}
+
+.scroll-animate-card img {
+  /* height: 350px; */
+  margin: auto;
+}
+
+.scroll-animate-card > div {
+  padding: 2rem;
+}
+
+.scroll-animate-card p {
+  /* opacity: 0.7; */
+  /* font-size: 1.25rem; */
+  color: var(--color-gray-300);
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.618rem; /* applying the golden ratio: ~26px vs. 16px*/
+  margin-bottom: 1rem; /* applying the golden ratio: ~26px vs. 16px*/
+}
+
+.scroll-animate-card ul,
+.scroll-animate-card ol {
+  list-style: none;
+  color: var(--color-gray-300);
+  font-family: sans-serif;
+  /* font-family: inherit; */
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin: 1rem;
+  margin-top: 0;
+  padding-left: 1.25rem;
+  /* margin-left: 1rem; */
+}
+
+.scroll-animate-card a {
+  /* color: rgb(94, 31, 146); */
+  color: #0062ff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.scroll-animate-card a:hover {
+  /* color: rgb(10, 66, 5); */
+  color: #0058e6;
+  text-decoration: underline;
+}
+
+/* .scroll-animate-card ul li {
+  font: inherit;
+  font-size: 1rem;
+  margin-left: 2rem;
+} */
+
+.wq-toolbox-highlight {
+  font-weight: 550;
+  color: var(--color-highlight-wqtoolbox);
+}
+
+.scroll-animate-card:nth-child(even) img {
+  order: 2;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 0.8rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Play with radio btn formatting */
+/* see: Max-Manu video #203 at ~8' 40" */
+.radio-scroll-animate-container {
+  margin: auto;
+  background-color: var(--color-gray-300);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  color: var(--color-gray-100);
+}
+.form-control-inline {
+  display: flex;
+  font-size: 1rem;
+  padding: 0.25rem 3rem;
+}
+
+.form-control-inline input {
+  width: auto; /* based on content */
+  margin: 0.5rem;
+}
+
+/* Emphasize text with WQ Map, WQ ToolBox, etc. */
+.emphasize-wq-app-name {
+  color: #1e2d85;
+  font-weight: 450;
+}
+
+/* --------------------------------------------------- */
+/* For 'preamble' of WQ ToolBox scroll animation cards */
+/* --------------------------------------------------- */
+
+/* see: https://bootstrapcreative.com/pattern/unordered-list-font-awesome-checkmark-bullets/ */
+.list-display {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  background-color: #ffffe0;
+  color: var(--color-gray-600);
+  margin-bottom: 1.5rem;
+  box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.8);
+}
+
+.list-display li {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+
+/* LIST CHECKMARKS FOR -- WQ MAP -- */
+/* see: https://bootstrapcreative.com/pattern/unordered-list-font-awesome-checkmark-bullets/ */
+.list-checkmarks-wqmap {
+  padding-left: 1.5rem;
+}
+.list-checkmarks-wqmap li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.list-checkmarks-wqmap li:before {
+  font-weight: 900; /* NB: font-weight MUST be 900 see: https://stackoverflow.com/questions/47788847/font-awesome-5-font-family-issue */
+  font-family: "Font Awesome 5 Free";
+  content: "\f3c5";
+  margin: 0 10px 0 -22px;
+  color: blue;
+}
+
+/* LIST CHECKMARKS FOR -- WQ TOOLBOX -- */
+.list-checkmarks {
+  padding-left: 1.5rem;
+}
+.list-checkmarks li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.list-checkmarks li:before {
+  font-weight: 900; /* NB: font-weight MUST be 900 see: https://stackoverflow.com/questions/47788847/font-awesome-5-font-family-issue */
+  font-family: "Font Awesome 5 Free";
+  /* className="fa fa-tools fa-md" */
+  content: "\f7d9";
+  margin: 0 10px 0 -22px;
+  color: blue;
+}
+
+/* LIST CHECKMARKS FOR -- WQ MANUAL -- */
+/* see: https://bootstrapcreative.com/pattern/unordered-list-font-awesome-checkmark-bullets/ */
+
+.list-checkmarks-wqmanual {
+  padding-left: 1.5rem;
+}
+.list-checkmarks-wqmanual li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.list-checkmarks-wqmanual li:before {
+  font-weight: 900; /* NB: font-weight MUST be 900 see: https://stackoverflow.com/questions/47788847/font-awesome-5-font-family-issue */
+  font-family: "Font Awesome 5 Free";
+  content: "\f02d"; /* f02d -- book */
+  margin: 0 10px 0 -22px;
+  color: blue;
+}
+
+.highlight-input-data {
+  color: blue;
+  font-weight: 550;
+}
+
+/* ------------------------------------------ */
+/* ----- CHECKMARK ICONS FOR ABOUT.html ----- */
+/* ------------------------------------------ */
+
+/*      Checkmarks for ABOUT.html       */
+/* Each of three <li>s has its own icon */
+/* LIST CHECKMARKS FOR -- WQ MAP -- */
+/* see: https://bootstrapcreative.com/pattern/unordered-list-font-awesome-checkmark-bullets/ */
+.list-checkmarks-wqmap-about {
+  padding-left: 1.5rem;
+}
+.list-checkmarks-wqmap-about li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.list-checkmarks-wqmap-about li:before {
+  font-weight: 900; /* NB: font-weight MUST be 900 see: https://stackoverflow.com/questions/47788847/font-awesome-5-font-family-issue */
+  font-family: "Font Awesome 5 Free";
+  content: "\f3c5";
+  margin: 0 10px 0 -22px;
+  color: rgb(28, 126, 214);
+  /* color: rgb(21, 85, 146); */
+}
+.list-checkmarks-wqmap-about:hover li:before {
+  color: rgb(21, 85, 146);
+  border-bottom: 1.5px solid rgb(9, 40, 68);
+  padding-bottom: 2px;
+}
+
+/* LIST CHECKMARKS FOR -- WQ TOOLBOX -- */
+.list-checkmarks-wqtoolbox-about {
+  padding-left: 1.5rem;
+}
+.list-checkmarks-wqtoolbox-about li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.list-checkmarks-wqtoolbox-about li:before {
+  font-weight: 900; /* NB: font-weight MUST be 900 see: https://stackoverflow.com/questions/47788847/font-awesome-5-font-family-issue */
+  font-family: "Font Awesome 5 Free";
+  /* className="fa fa-tools fa-md" */
+  content: "\f7d9";
+  margin: 0 10px 0 -22px;
+  color: rgb(28, 126, 214);
+  /* color: rgb(21, 85, 146); */
+}
+.list-checkmarks-wqtoolbox-about:hover li:before {
+  color: rgb(21, 85, 146);
+  border-bottom: 1.5px solid rgb(9, 40, 68);
+  padding-bottom: 2px;
+}
+
+.list-checkmarks-wqmanual-about {
+  padding-left: 1.5rem;
+}
+.list-checkmarks-wqmanual-about li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.list-checkmarks-wqmanual-about li:before {
+  font-weight: 900; /* NB: font-weight MUST be 900 see: https://stackoverflow.com/questions/47788847/font-awesome-5-font-family-issue */
+  font-family: "Font Awesome 5 Free";
+  content: "\f02d"; /* f02d -- book */
+  margin: 0 10px 0 -22px;
+  color: rgb(28, 126, 214);
+  /* color: rgb(21, 85, 146); */
+}
+.list-checkmarks-wqmanual-about:hover li:before {
+  color: rgb(21, 85, 146);
+  border-bottom: 1.5px solid rgb(9, 40, 68);
+  padding-bottom: 2px;
+}
+/* .list-checkmarks-wqmanual-about strong:hover {
+  color: rgb(21, 85, 146);
+  border-bottom: 1.5px solid rgb(9, 40, 68);
+  padding-bottom: 2px;
+} */
+
+/* ------------------------- */
+/* ------------------------- */
+
+@media (max-width: 812px) {
+  /* @media (max-width: 720px) { */
+  .main-header {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wqtoolbox-bullets {
+    width: 100%;
+  }
+
+  .scroll-animate-card {
+    display: block;
+    text-align: center;
+  }
+
+  .scroll-animate-card div {
+    border-top: 1px dashed #474d56;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    background-color: #fbfcff;
+  }
+
+  .scroll-animate-card .h3-above-img {
+    display: block;
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .scroll-animate-card h3 {
+    display: none;
+    text-align: center;
+  }
+
+  .scroll-animate-card img {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  img:hover,
+  img:active {
+    transform: scale(1);
+    /* position: absolute; */
+    /* top: 20;
+    left: 100; */
+  }
+
+  .scroll-animate-card > div {
+    text-align: left;
+  }
+}
+
+article .wq-icon-for-scroll-page {
+  position: relative;
+  color: #fff;
+  /* margin: 2rem auto; */
+  /* padding: 2rem 0; */
+  padding-bottom: 1rem;
+  font-size: 4rem;
+  text-align: left;
+}
+
+.wq-marker-in-water {
+  padding: 2rem auto;
+  /* width: 110%; */
+}
+
+#wq-marker-icon {
+  font-size: 4rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 4.5rem;
+  margin: 0.5rem 0;
+}
+
+#wq-marker-water-icon {
+  position: absolute;
+  left: 2.35rem;
+  top: 7.25rem;
+  color: skyblue;
+  font-size: 3rem;
+}
+
+/* TABLET (portrait) and under... */
+/* ...52rem = 832px... */
+/* @media (max-width: 52rem) { */
+@media (max-width: 1024px) {
+  .what-is-and-bullets-for-ml {
+    height: 54rem;
+    margin-top: 0x;
+  }
+
+  /* ---------------- */
+  /* Stack Grid Items */
+  /* ---------------- */
+  .what-is-and-bullets .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .what-is-and-bullets {
+    height: auto; /* pushes down following section (Stats) */
+  }
+
+  .what-is-and-bullets-text {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .wqtoolbox-bullets {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #wq-marker-icon {
+    left: 2.75rem;
+    top: 5.5rem;
+  }
+
+  #wq-marker-water-icon {
+    color: skyblue;
+    left: 2.52rem;
+    top: 7.95rem;
+  }
+}
+
+@media (max-width: 823px) {
+  /* @media (max-width: 812px) { */
+  article .wq-icon-for-scroll-page {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  #wq-marker-icon {
+    display: none;
+    left: 2.75rem;
+    top: 3.5rem;
+  }
+
+  #wq-marker-water-icon {
+    display: none;
+    color: skyblue;
+    left: 2.52rem;
+    top: 7.95rem;
+  }
+
+  /* STACKED ICONS */
+  #contain-stacked-icons {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  /* #wqmap-marker-stacked {
+    font-size: 5rem;
+    bottom: 0.75rem;
+  }
+
+  #wqmap-water-stacked {
+    color: rgb(31, 142, 179);
+    font-size: 3rem;
+    left: 0.25rem;
+  } */
+}
+
+@media (max-width: 414px) {
+  /* @media (max-width: 375px) { */
+  .what-is-and-bullets h1 {
+    margin-top: 3.5rem;
+    font-size: 3rem;
+  }
+
+  .what-is-and-bullets p {
+    margin-top: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .wqtoolbox-bullets {
+    padding: 0;
+  }
+
+  article .wq-icon-for-scroll-page {
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+  }
+
+  #contain-stacked-icons {
+    margin-top: 7.5rem;
+  }
+
+  #img-about-showcase {
+    width: 100%;
+  }
+}

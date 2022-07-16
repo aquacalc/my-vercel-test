@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/overlay.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/tldr.css" />
+    <script src="/scripts/overlay.js" defer></script>
+    <!-- Animate.css Page Transitions -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>WQ tl;dr</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body class="animate__animated animate__fadeIn" id="body-tldr">
+    <!-- navbar-wqmap -->
+    <div class="navbar-wqmap">
+      <div class="container flex">
+        <!-- "...utility class of flex..."-->
+        <h3 class="logo">
+          <a href="index.html">The WQ ToolBox<sup>+</sup></a>
+        </h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="selectedNavMenu" href="tldr.html">tl;dr</a></li>
+            <li><a href="about.html">About...</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="backdrop"></div>
+    <!-- <div class="shadow"></div> -->
+
+    <!-- <header>
+      <h3>The WQ Map <span className="tldrToolTip">TL;DR</span></h3>
+    </header> -->
+
+    <!-- <myIndexMain id="swup" class="transition-fade"> -->
+    <section class="tldr-wqmap">
+      <header>
+        <!-- <img
+            class="wqmapLogo"
+            src="/images/wqmap-logo.png"
+            alt="WQ Map logo"
+          /> -->
+        <h3><span class="tldrWqMap">The WQ Map</span></h3>
+      </header>
+
+      <!-- MODAL OVERLAY STRUCTURE -->
+      <!-- see: https://medium.com/@josephat94/a-simple-but-awesome-animation-with-css3-for-your-modals-eb24ebe4ab99 -->
+      <!-- <aside class="modal"> -->
+      <aside id="modal-window" class="shadow initModalClosed">
+        <article class="modal-content">
+          <h2 class="modal-content-title">Title</h2>
+          <div class="modal-content-paras">
+            <h3>
+              <em><span class="insert-item">item</span>?</em>
+            </h3>
+            <p class="modal-content-para">
+              pH is a measure of a solution’s acidity.
+            </p>
+            <p class="modal-content-para">
+              The pH scale runs from negative (yes: <em>negative</em>) values to
+              more than 15.
+            </p>
+            <p class="modal-content-para">
+              Most pH values in aquaculture and aquaponics range between about 6
+              and 9, depending on the target species.
+            </p>
+            <hr />
+          </div>
+
+          <div class="modal-content-btn">
+            <button class="btn modal-close-btn">Close</button>
+            <button class="btn modal-deeper-info-btn">Deeper info...</button>
+          </div>
+        </article>
+      </aside>
+
+      <section class="tldr-container wqmap">
+        <div class="bg1" data-item="What is The WQ Map?">
+          <article class="the-w">
+            <h1>What?</h1>
+            <h3><em>What is The WQ Map?</em></h3>
+          </article>
+          <!-- <h2>16 <span>| 24</span></h2> -->
+        </div>
+        <div class="bg1" data-item="What problem does it solve?">
+          <article class="the-w">
+            <h1>Why?</h1>
+            <h3><em>What problem does it solve?</em></h3>
+          </article>
+          <!-- <h2><i class="fas fa-battery-three-quarters"></i></h2> -->
+        </div>
+        <div class="bg2" data-item="Where did it come from?">
+          <article class="the-w">
+            <h1>Whence?</h1>
+            <h3><em>Where is the idea from?</em></h3>
+            <!-- <h2><i class="fas fa-running"></i></h2> -->
+          </article>
+        </div>
+        <div class="bg1" data-item="Where is development going?">
+          <article class="the-w">
+            <h1>Whither?</h1>
+            <h3><em>Where is the app headed?</em></h3>
+            <!-- <h2>36 &deg;</h2> -->
+          </article>
+        </div>
+        <div class="bg2" data-item="Who developed it?">
+          <article class="the-w">
+            <h1>Who?</h1>
+            <h3><em>Who built it?</em></h3>
+            <!-- <h2><i class="fas fa-bed"></i></h2> -->
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ** The WQ ToolBox ** -->
+    <section class="tldrWqToolBox">
+      <header>
+        <!-- <span
+            class="fa-stack fa-sm rounded-circle"
+            style="
+              background: #f4c100;
+              width: 55px;
+              border-radius: 50px;
+              margin-bottom: 0.5rem;
+            "
+            title="The Water Quality Map"
+          >
+            <i
+              class="fa fa-tools fa-md fa-stack-1x"
+              style="color: rgb(17, 71, 172)"
+            ></i>
+            <i class="fa fa-water fa-sm fa-stack-1x" style="color: skyblue"></i>
+          </span> -->
+        <h3>
+          <span class="tldrWqToolBox">The WQ ToolBox</span>
+        </h3>
+      </header>
+      <!-- MODAL OVERLAY STRUCTURE -->
+      <!-- see: https://medium.com/@josephat94/a-simple-but-awesome-animation-with-css3-for-your-modals-eb24ebe4ab99 -->
+      <!-- <aside class="modal"> -->
+      <aside id="modal-window" class="shadow initModalClosed">
+        <article class="modal-content">
+          <h2 class="modal-content-title">Title</h2>
+          <div class="modal-content-paras">
+            <h3>
+              <em>What is <span class="insert-item">item</span>?</em>
+            </h3>
+            <p class="modal-content-para">
+              pH is a measure of a solution’s acidity.
+            </p>
+            <p class="modal-content-para">
+              The pH scale runs from negative (yes: <em>negative</em>) values to
+              more than 15.
+            </p>
+            <p class="modal-content-para">
+              Most pH values in aquaculture and aquaponics range between about 6
+              and 9, depending on the target species.
+            </p>
+            <hr />
+            <h3>
+              <em>Why is <span class="insert-item">item</span> important?</em>
+            </h3>
+            <p class="modal-content-para">
+              pH controls the rate and direction of important processes that
+              determine the success of aquatic systems. These include the…
+            </p>
+            <ul>
+              <li>...concentration of toxic un-ionized ammonia (UIA)</li>
+              <li>...removal of toxic ammonia by nitrifying bacteria</li>
+              <li>...amount of toxic dissolved carbon dioxide (CO2)</li>
+              <li>
+                ...calcite saturation state Ω (omega), important in skeletal
+                formation
+              </li>
+              <li>...effectiveness of chlorine treatment to kill pathogens</li>
+              <li>
+                ...availability of essential minerals for hydroponic plants
+              </li>
+            </ul>
+
+            <hr />
+            <h3>
+              <em>And...</em>
+            </h3>
+            <p class="modal-content-para">
+              Neutral pH is not always 7; it depends on water temperature &
+              salinity.
+            </p>
+            <p class="modal-content-para">
+              <em>e.g.</em>, seawater at 25° C (77° F) & 34.5‰ salinity is
+              neutral at pH 6.61.
+            </p>
+            <p class="modal-content-para">
+              Neutral pH is not a “magic boundary”: Some organisms have evolved
+              to prefer lower (acidic) pH and others prefer higher (basic or
+              alkaline) pH.
+            </p>
+            <p class="modal-content-para">
+              Typical seawater has a pH of about 8.1; healthy human blood, pH
+              7.35 - 7.45.
+            </p>
+          </div>
+
+          <div class="modal-content-btn">
+            <button class="btn modal-close-btn">Close</button>
+            <button class="btn modal-deeper-info-btn">Deeper info...</button>
+          </div>
+        </article>
+      </aside>
+
+      <section class="tldr-container wqtoolbox">
+        <div class="bg1" data-item="What is The WQ ToolBox?">
+          <article class="the-w">
+            <h1>What?</h1>
+            <h3><em>What is The WQ ToolBox?</em></h3>
+          </article>
+        </div>
+        <div class="bg1" data-item="What problem does it solve?">
+          <article class="the-w">
+            <h1>Why?</h1>
+            <h3><em>What problem does it solve?</em></h3>
+          </article>
+        </div>
+        <div class="bg2" data-item="Where did it come from?">
+          <article class="the-w">
+            <h1>Whence?</h1>
+            <h3><em>Where did it come from?</em></h3>
+          </article>
+        </div>
+        <div class="bg1" data-item="Where is development going?">
+          <article class="the-w">
+            <h1>Whither?</h1>
+            <h3><em>Where is development going?</em></h3>
+          </article>
+        </div>
+        <div class="bg2" data-item="Who developed it?">
+          <article class="the-w">
+            <h1>Who?</h1>
+            <h3><em>Who developed it?</em></h3>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer
+    class="footer py-1" -->
+    <footer
+      style="
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        background-color: #2f353f;
+        color: #cfc6c9;
+      "
+    >
+      <!-- <footer class="footer bg-dark py-1"> -->
+      <article>
+        <nav>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="selectedNavMenu" href="tldr.html">tl;dr</a></li>
+            <li><a href="scroll-animate.html">Docs</a></li>
+          </ul>
+        </nav>
+      </article>
+      <p>&copy; 2022 --Nick/ Staresinic</p>
+    </footer>
+  </body>
+</html>

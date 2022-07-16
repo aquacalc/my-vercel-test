@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Do you sometimes feel that you are wandering the Water Chemistry Wilderness without a map? Or that you need a degree in Chemistry to control your aquaculture or aquaponics system? The Water Quality Map makes precision water-quality management available to everyone with its interactive map of pH, alkalinity, un-ionized ammonia, and other key properties that determine the health of culture water."
+    />
+    <meta
+      name="keywords"
+      content="aquaculture, aquaponics, biofloc, water quality, pH, alkalinity, bicarbonate, un-ionized ammonia, RAS water chemistry, carbon dioxide, shrimp"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/scroll-animate.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/ml-and-wq-map.css" />
+    <script src="/scripts/homepage.js" defer></script>
+
+    <!-- [NB] Do not add "defer", as that (somehow) disables (popover) script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Animate.css Page Transitions -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>ML & The WQ Map</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-3.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
+  </head>
+  <body class="animate__animated animate__fadeIn">
+    <!-- Navbar -->
+    <div class="navbar-wqmap">
+      <div class="container-index flex">
+        <h3 class="logo">
+          <a href="index.html">The WQ ToolBox<sup>+</sup></a>
+        </h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a class="selectedNavMenu" href="index.html">Home</a></li> -->
+            <!-- <li><a href="tldr.html">tl;dr</a></li> -->
+            <li title="The WQ Map">
+              <a href="scroll-wqmap.html"
+                ><i class="fas fa-map-marker-alt"></i
+              ></a>
+            </li>
+            <li title="The WQ ToolBox">
+              <a href="scroll-wqtoolbox.html"><i class="fa fa-tools"></i></a>
+            </li>
+            <li style="margin-top: 1.5px" title="The WQ Manual">
+              <a href="scroll-wqmanual.html"><i class="fa fa-book"></i></a>
+            </li>
+            <li style="margin-top: 0;" title="ML & RAS">
+              <a class="selectedNavMenu" href="#"><img
+                class="ml-img"
+                id="ml-icon"
+                style="padding-bottom: 0.15px; border-radius: 2px; box-shadow: none; background-color: #e5e2e2; width: 1.0rem;"
+                src="/images/deep-learning.png"
+                alt="machine learning"
+              /></a>
+            </li>
+            <li><a href="about.html">About...</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- HEAD -->
+    <section class="what-is-and-bullets-for-ml" >
+
+      <div class="container-index grid-for-scroll-pages">
+        <article id="contain-stacked-icons">
+          <!-- <span class="fa-stack fa-lg">
+            <i
+              class="fas fa-map-marker-alt fa-stack-2x"
+              id="wqmap-marker-stacked"
+            ></i>
+            <i
+              class="fa fa-water fa-stack-2x text-danger"
+              id="wqmap-water-stacked"
+            ></i>
+          </span> -->
+
+          <span>
+            <img
+              class="ml-img"
+              id="ml-icon"
+              src="/images/deep-learning.png"
+              alt="machine learning"
+            />
+          </span>
+
+          <!-- <a href="https://www.flaticon.com/free-icons/deep-learning" title="deep learning icons">Deep learning icons created by Becris - Flaticon</a> -->
+          <!-- <a
+            href="https://www.flaticon.com/free-icons/deep-learning"
+            title="deep learning icons"
+            >Deep learning icons created by Becris - Flaticon</a
+          > -->
+          <!-- <a href="https://www.flaticon.com/free-icons/machine-learning" title="machine learning icons">Machine learning icons created by Becris - Flaticon</a> -->
+
+          <h1 class="section-title">
+            Machine Learning <span style="font-size: 2rem">&</span><br /><span
+              >The WQ Map</span
+            >
+          </h1>
+          <p class="lead">enchancing precision RAS with ML</p>
+        </article>
+
+        <div class="wqtoolbox-bullets">
+          <ul class="list-display list-ml-spacing">
+            <!-- <ul class="list-display list-checkmarks-wqmap list-ml-spacing"> -->
+            <li>
+              <strong class="highlight-text">
+                Traditional models fail to provide accurate predictions
+              </strong>
+              <span class="bullet-sub-text">of complex systems</span>
+            </li>
+            <li>
+              <strong class="highlight-text">
+                That’s a problem with typical stoichiometric models
+              </strong>
+              <span class="bullet-sub-text"> of aquaculture</span>
+            </li>
+            <hr class="ml-line-sep" />
+            <li>
+              <strong class="highlight-text">
+                ML has an impressive track record
+              </strong>
+              <span class="bullet-sub-text">
+                of highly accurate predictions
+              </span>
+            </li>
+            <li>
+              <strong class="highlight-text">
+                Precision RAS management will benefit from ML
+              </strong>
+              <span class="bullet-sub-text">modeling techniques</span>
+            </li>
+            <hr class="ml-line-sep" />
+
+            <li>
+              <strong class="highlight-text">
+                ML needs truck-loads of nutritious data
+              </strong>
+              <span class="bullet-sub-text">
+                to develop its predictive muscles
+              </span>
+            </li>
+
+            <li>
+              <strong class="highlight-text">
+                RAS datasets are sparse but can be augmented
+              </strong>
+              <span class="bullet-sub-text"> by generative ML algorithms </span>
+            </li>
+            <hr class="ml-line-sep" />
+
+            <li>
+              <strong class="highlight-text">
+                Equipping the WQ Map with ML will boost control
+              </strong>
+              <span class="bullet-sub-text"> of RAS water quality by...</span>
+            </li>
+
+            <li>
+              ...<strong class="highlight-text"
+                >managing biofloc carbohydrates
+              </strong>
+              <span class="bullet-sub-text"> &amp; </span>
+              <strong class="highlight-text">
+                early detection of crop anomalies
+              </strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem -->
+    <section>
+      <p id="difficult-to-make-predictions">
+        <span id="toc"></span>
+        <em>
+          "It’s difficult to make predictions -- especially about the future."
+        </em>
+      </p>
+
+
+      <p id="yogi-ism">
+        <a class="ml-link"
+          href="https://quoteinvestigator.com/2013/10/20/no-predict/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          an old Danish proverb </a
+        >  (and, for baseball fans, a 
+        <a class="ml-link"
+          href="https://teamhewins.com/wp-content/uploads/2020/02/yogi-berra-photo-quote-1.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yogi-ism
+        </a>
+        )
+      </p>
+      <!-- <div class="the-ml-problem">
+        <h4 style="margin-bottom: 2px">The Problem</h4>
+
+        <p style="margin-bottom: 10px">
+          Traditional modeling limits our ability to forecast the behavior of
+          complex systems.
+        </p>
+        <p>
+          That frustrates efforts to advance management of Recirculating
+          Aquaculture Systems (<strong>RAS</strong>).
+        </p>
+      </div> -->
+    </section>
+
+
+    <!-- {/* TABLE OF CONTENTS */} -->
+    <div class="ml-toc">
+      <h4 className="text-cent" style="text-align: center;">
+        Table of Contents
+      </h4>
+      <ul>
+        <li>
+          <a class="ml-link" href="#trad">What is "traditional modeling"?</a>
+        </li>
+        <li>
+          <a class="ml-link" href="#ml">What's the alternative?</a>
+        </li>
+
+        <li>
+          <a class="ml-link" href="#tale-of-tape">
+            Traditional <em>vs.</em> ML
+          </a>
+        </li>
+        <li>
+          <a class="ml-link" href="#track-record">The ML track-record</a>
+        </li>
+
+        <li>
+          <a class="ml-link" href="#qin">An eye-catching ML application</a>
+        </li>
+
+        <li>
+          <a class="ml-link" href="#ml-wqmap">ML and the WQ Map</a>
+        </li>
+
+        <li>
+          <a class="ml-link" href="#data-aug">Data augmentation</a>
+        </li>
+
+        <li>
+          <a class="ml-link" href="#flesh-and-blood">
+            The role of flesh-and-blood aquaculturists
+          </a>
+        </li>
+
+        <li>
+          <a class="ml-link" href="#next">Next steps</a>
+        </li>
+        
+        <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+        <div id="trad"></div>
+
+        <!-- <li>
+          <a class="ml-link" href="#blather">Optional blather...</a>
+        </li> -->
+      </ul>
+    </div>
+
+
+    <hr>
+
+    <!-- {/* TRADITIONAL APPROACH */} -->
+    <div class="ml-heading-div">
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        What is “traditional modeling”? 
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul"></i>
+        </a>
+      </h2>
+    </div>
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p>
+            In the traditional modeling approach, we have 
+            <strong>data</strong> and a <strong>formula</strong> (or 
+            <strong>rules</strong>).
+          </p>
+
+          <p>
+            The formula tells us how to combine the data to calculate a 
+            <strong>result</strong> (or <strong>answers</strong>).
+          </p>
+
+          <div class="div-with-image">
+            <img
+              class="about-image"
+              style="border-radius: 4px;"
+              src='images/Image - Traditional.png'
+              alt="traditional-programming"
+            />
+            <small>
+              (image from 
+              <a class="ml-link"
+                href="https://www.seeedstudio.com/wio-terminal-tinyml.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                seeedstudio.com
+              </a>
+              )
+            </small>
+          </div>
+
+          <p>
+            <em>An example</em>: Suppose our focus is on the concentration
+            of dissolved CO<sub>2</sub>. Well, there’s a formula (<strong><em>the rules</em></strong>) based on our understanding of chemistry that tells us how to
+            combine temperature, salinity, pH, &amp; alkalinity (<em>the <strong>data</strong></em>) to compute dissolved CO<sub>2</sub> (<em>that’s the <strong>answer</strong></em>).
+          </p>
+
+          <p>
+            This traditional approach works well in steady-state systems
+            described by simple formulae.
+          </p>
+
+          <p>
+            <span class="highlight-text-green">
+            Real-world RAS, however, is far more complicated: there are many
+            “moving parts” and we don’t understand their interactions well
+            enough to write equations that adequately capture their full,
+            non-steady-state behavior.
+            </span>
+          </p>
+        
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="ml"></div>
+
+          <p>
+            So, in the Real World, we have data — usually not all we want —
+            but we do <em>not</em> have dependable formulae that use those
+            data to produce accurate predictions.
+          </p>
+
+          <!-- <p
+            class="small-light-footnote-text"
+          >
+            [The <a class="ml-link" href="#blather">final section</a> describes a few issues
+            with using traditional modeling to predict the behavior of
+            complex systems.]
+          </p> -->
+        </div>
+      </Col>
+    </Row>
+
+    <!-- {/* ML Alternative */} -->
+    <div class="ml-heading-div">
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        What's the alternative?
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+        <i class="fas fa-list-ul"></i>
+        </a>
+      </h2>
+    </div>
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p style="margin-bottom: 12px">
+            <span class="highlight-text-green">
+              The alternative is Machine Learning (<strong>ML</strong>).
+            </span>
+          </p>
+
+          <p style="margin-bottom: 12px">
+            In the ML approach, we have <strong>data</strong> and a
+            <strong>result</strong> (<strong>answers</strong>) but — unlike
+            the traditional approach — we do <em>not</em> have a
+            <strong>formula</strong> (<strong>rules</strong>) connecting
+            them.
+          </p>
+
+          <div class="div-with-image">
+            <img
+              class="about-image"
+              style="border-radius: 4px;"
+              src='images/Image - ML.png'
+              alt="ML-programming"
+            />
+            <small>
+              (image from
+              <a class="ml-link"
+                href="https://www.seeedstudio.com/wio-terminal-tinyml.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                seeedstudio.com
+              </a>
+              )
+            </small>
+          </div>
+
+          <p style="margin-bottom: 12px">
+            <em>Why don’t we have a formula?</em>
+          </p>
+
+          <p style="margin-bottom: 12px">
+            Because the system we want to control is too damned complex to
+            be described accurately by nice, neat equations: We don’t know
+            how to write (and solve) comprehensive rules that tell us how to
+            use the input data to calculate the output result.
+          </p>
+
+          <p style="margin-bottom: 12px">
+            <em>So...what do we do?</em>
+          </p>
+
+          <p style="margin-bottom: 12px">
+            We train a machine learning model.
+          </p>
+
+          <p class="mb-12">
+            <em>How?</em>
+          </p>
+
+          <p class="mb-2">
+            In very general terms, there are four steps...
+          </p>
+
+          <ol style="margin-left: 50px; margin-right: 150px">
+            <li style="margin-bottom: 12px">
+              feed the model the input data (<em>which we have</em>)
+            </li>
+            <li style="margin-bottom: 12px">
+              compare the model's output with the actual result (<em>which we have</em>)
+            </li>
+            <li style="margin-bottom: 12px">
+              calculate the error between the model's prediction and the
+              actual result
+            </li>
+            <li style="margin-bottom: 12px">
+              <strong>repeat</strong> <em>until the error is so small</em>
+              that the model has “learned” how to map the input data to the
+              result with high accuracy
+            </li>
+          </ol>
+
+          <p style="margin-bottom: 12px">
+            In this way, ML models learn to identify patterns in the data
+            that relate the input to the output.
+          </p>
+
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="tale-of-tape"></div>
+
+          <p style="margin-bottom: 12px">
+            <span class="highlight-text-green">
+              And once we have a well-trained ML model, we have a tool that
+              can forecast the behavior of complex systems with an accuracy
+              that far exceeds that of traditional models.
+            </span>
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <!-- {/* Tale of the Tape */} -->
+    <div
+      class="ml-heading-div" >
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        Traditional <em>vs</em>. ML — The tale of the tape
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul" ></i>
+        </a>
+      </h2>
+    </div>
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <h4 style="margin-top: 1.5rem">Formulae (rules) that map input to output</h4>
+          <ul class="ml-tale-of-the-tape">
+            <li>
+              <span class="highlight-text-green">
+                <strong>Traditional models use</strong> 
+                <em class="'highlight-text">predefined rules developed by human experts.</em>
+              </span>
+              <br/><em>e.g.</em>, the rules of stoichiometry, the branch of chemistry that
+              quantifies relationships among substances in a chemical
+              reaction.
+            </li>
+
+            <li>
+              <span class="highlight-text-green">
+                <strong>ML models</strong> 
+                <em class="'highlight-text">learn the rules from the data.</em>
+              </span>
+            </li>
+          </ul>
+          <h4 style="margin-top: 1.5rem">Interpretability</h4>
+          <ul class="ml-tale-of-the-tape">
+            <li>
+              <span class="highlight-text-green">
+                <strong>Traditional models are</strong> 
+                <em class="'highlight-text">interpretable in terms of system features.</em>
+              </span> 
+              <br/><em>i.e.</em>, they contain variables &amp; parameters that represent
+              identifiable physical, chemical, &amp; biological features of
+              the system, such as temperature, dissociation
+              constants, biomass, feeding rate, TDS, <em>etc</em>.
+            </li>
+            <li>
+              <span class="highlight-text-green">
+                <strong>ML models are</strong> 
+                <em class="'highlight-text">
+                  <span
+                    style=
+                      "font-weight: 500;
+                      text-decoration: underline red;"
+                    }}
+                  >
+                    un</span>interpretable in terms of system features.
+                </em>
+              </span>
+              <br/>They’re black boxes that hide causality. Well-trained ML models just work.
+            </li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem">Forecasting</h4>
+          <ul class="ml-tale-of-the-tape">
+            <li>
+              <span class="highlight-text-green">
+                <strong>Traditional models</strong> 
+                <em class="'highlight-text">
+                  emphasize semantic inference.
+                </em>
+              </span> 
+              <br/>They're built on an understanding of the relationships by which
+              inputs produce outputs. This can be at the expense of accurate prediction.
+            </li>
+            <li>
+              <span class="highlight-text-green">
+                <strong>ML models</strong> 
+                <em class="'highlight-text">
+                  emphasize accurate prediction.
+                </em>
+              </span> 
+              <br/>Predictions are based on <em>statistical inference</em> without addressing the physical, chemical, &amp;
+              biological mechanisms by which inputs produce outputs.
+            </li>
+          </ul>
+
+          <p style='margin-top: 25px'>
+            The ML paradigm calls to mind a much cited quote of iconic
+            computer scientist 
+            <a class="ml-link"
+              href="https://en.wikipedia.org/wiki/Ken_Thompson"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ken Thompson</a>:
+          </p>
+
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="track-record"></div>
+
+          <p
+            style=
+              "font-size: 1.35rem;
+              margin-top: 0px;
+              margin-bottom: 8px;
+              text-align: center"
+          >
+            <em>“When in doubt, use brute force.”</em>
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <!-- {/* TRACK RECORD */} -->
+    <div
+      class="ml-heading-div"
+      style="display: flex; justify-content: space-between"
+    >
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        The ML track-record
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul"></i>
+        </a>
+      </h2>
+    </div>
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p>
+            The ML approach continues to have wild success solving a wide
+            variety of very complex real-world problems that cannot be
+            solved with traditional modeling.
+          </p>
+          <p>Among these...</p>
+          <Row style="display: flex; justify-content: space-evenly; gap: 0.5rem">
+            <Col>
+              <div class="ml-track-record-list">
+                <ul style="margin-left: 0; list-style-type: circle; padding: 1rem 3rem;">
+                  <li>image classification</li>
+                  <li>simultaneous translation</li>
+                  <li>investment analysis</li>
+                  <li>protein folding</li>
+                  <li>medical diagnoses</li>
+                  <li>autonomous drone swarms</li>
+                  <li>stumble-proof robots</li>
+                  <li>industrial process control</li>
+                </ul>
+              </div>
+              
+            </Col>
+            <Col>
+              <div class="ml-track-record-list">
+                <ul style="margin-left: 0; list-style-type: circle; padding: 1rem 3rem;">
+                  <li>speech recognition</li>
+                  <li>computer vision</li>
+                  <li>insurance decisions</li>
+                  <li>pharmaceutical drug discovery</li>
+                  <li>landslide detection</li>
+                  <li>driverless vehicles</li>
+                  <li>umpire-less strike zones</li>
+                  <li>non-text search engines</li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+
+          <p style="margin-top: 20px">
+            ...and humbling human contestants on <em>Jeopardy</em>.
+          </p>
+
+          <hr
+            class="hr-white"
+            style='margin-top: 12px; margin-bottom: 18px'
+          />
+
+          <p>
+            That said, it's reassuring to understand that 
+            <span class="highlight-text-green">
+              ML's success does not make a person's hard-earned aquaculture
+              expertise obsolete.
+            </span>
+          </p>
+
+          <p
+            style="font-size: 1.0rem;
+              margin-left: 25px;
+              margin-right: 25px;"
+          >
+            <em>
+              "For all their hauntingly accurate results, deep learning
+              algorithms are not the general intelligences of science
+              fiction the public often perceives them to be. Today’s deep
+              learning systems are nothing more than powerful inference
+              systems that learn statistical correlations between their
+              inputs and outputs."
+            </em> 
+
+            (see:  <a class="ml-link"
+              href="https://www.forbes.com/sites/kalevleetaru/2019/04/18/waymo-reminds-us-successful-complex-ai-combines-deep-learning-and-traditional-code/?sh=265a31f93a2c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            )
+          </p>
+          
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="qin"></div>
+
+          <p>
+            As noted <a class="ml-link" href="#flesh-and-blood">below</a>, a consequence of
+            that frank admission is that flesh-and-blood aquaculturists
+            remain essential for successful RAS management. 
+            <span class="highlight-text-green">
+              ML models are another tool in the RAS digital toolbelt.
+            </span>
+          </p>
+
+          <!-- {/* <p>
+            <em>And RAS?</em>
+          </p>
+          <p>
+            There is ShrimpNet, a Chinese ML semantic segmentation model.
+            There must be others, but I’ve only started a deep search.
+          </p> */} -->
+
+        </div>
+      </Col>
+    </Row>
+
+
+    <!-- {/* Eye-catching Application */} -->
+    <div
+      class="ml-heading-div">
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        An eye-catching ML application
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul"></i>
+        </a>
+      </h2>
+    </div>
+
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p>
+            The following ML application very clearly underscores the
+            difference between the two modeling approaches in a field —
+            Physics — which, unlike RAS, enjoys well developed and
+            time-tested formulae.
+          </p>
+          <p>
+            Princeton physicist Hong Qin [pronounced like “chin”] developed
+            an ML model that predicts the orbits of planetary bodies in our
+            solar system (<em>see</em>: 
+            <a class="ml-link"
+              href="https://www.sciencedaily.com/releases/2021/02/210212094120.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >here</a>).
+          </p>
+
+          <p>
+            He trained the model with orbital data of Mercury, Venus, Earth,
+            Mars, Jupiter, &amp; Ceres (a large asteroid in the belt between
+            Mars and Jupiter).
+          </p>
+
+          <!-- {/* Planets & Ceres */} -->
+          <div
+            style=
+              "text-align: center;
+              margin-top: 15px;
+              margin-bottom: 12px;"
+          >
+            <img
+              class="about-image"
+              style="border-radius: 4px;"
+              src='images/planets_and_ceres.jpeg'
+              alt="Planets and Ceres"
+            />
+            <small>
+              The planets and Ceres (image from 
+              <a class="ml-link"
+                href="https://commons.wikimedia.org/wiki/File:Ceres_solarsystem.jpg "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Wikimedia Commons
+              </a>
+              )
+            </small>
+          </div>
+
+          <p>
+            He then used the trained model to correctly predict the orbits
+            of other planetary bodies in the solar system, including their
+            parabolic &amp; hyperbolic escape orbits.
+          </p>
+
+          <p>
+            <em>The kicker</em>: The ML model was not programmed with
+            Newton's Law of Motion &amp; Law of Universal Gravitation — it
+            didn’t “know” anything about them; it figured out the consequences of those laws on
+            its own from the data.
+          </p>
+
+          <p>
+            (Take <em>that</em>, Copernicus and Kepler!)
+          </p>
+
+          <p
+            style=
+              "font-size: 1.1rem;
+              margin-left: 25px;
+              margin-right: 25px;"
+          >
+            <em>
+            <!-- <em class="highlight-text-green"> -->
+              "I would argue that the ultimate goal...is
+              prediction,"
+            </em> 
+            <span style='background-color: white;'> Qin said.</span> <em>"You might not necessarily need a law. "For example,</em>
+          </p>
+
+          <!-- <p
+            style=
+              "font-size: 1.1rem;
+              margin-left: 25px;
+              margin-right: 25px;"
+          >
+          <em>
+              "You might not necessarily need a law.
+            </em>
+          </p> -->
+
+          <p
+            style=
+              "font-size: 1.1rem;
+              margin-left: 25px;
+              margin-right: 25px;
+              padding: 0.75rem 0;"
+          >
+        <em class="highlight-text-green"><span 
+          class="dotted-underline"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-trigger="hover"
+          data-bs-title="Substitute..."
+          data-bs-content-id="popover-content">
+            if I can perfectly predict a planetary orbit, [then] I don't need
+            to know Newton's laws of gravitation and motion.
+          </span>
+        </em>"
+        </p>
+          <div id="popover-content" class="d-none">
+            <div class="ml-popover">
+              If I can perfectly predict<br/><strong>an aquaculture crop</strong>,<br/>then I don't need to know the<br/><strong>formulae of<br/>aquaculture water chemistry</strong>.
+            </div>
+          </div>
+          <p>
+            Further: "<span 
+              class="dotted-underline"
+              data-bs-toggle="popover"
+              data-bs-placement="top"
+              data-bs-trigger="hover"
+              data-bs-title="Substitute..."
+              data-bs-content="Usually in water chemistry">Usually in Physics</span>
+            , you make observations [<em>the data</em>], create a theory
+            based on those observations [<em>the formulae</em>], and then
+            use that theory to predict new observations [<em>the result</em>
+            ].”
+          </p>
+
+          <p>
+            In a nutshell, he described the traditional modeling approach
+            outlined above.
+          </p>
+
+          <p>He then said:</p>
+
+          <p
+            style=
+              "font-size: 1.1rem;
+              margin: 1.5rem 1.56rem;"
+          >
+              <span 
+              class="dotted-underline"
+              data-bs-toggle="popover"
+              data-bs-placement="top"
+              data-bs-trigger="hover"
+              data-bs-title="Substitute..."
+              data-bs-content-id="popover-content-2">
+                <em class="highlight-text-green">
+                  "...I'm...replacing this process with a type of
+                  black box that produces accurate predictions without
+                  using traditional theory..."</em></span></p>
+
+          <div id="popover-content-2" class="d-none">
+            <div class="ml-popover">
+              I'm replacing traditional analysis<br/>with a black box</br>that
+              accurately predicts</br><strong>aquaculture water chemistry</strong></br><em>without</em> using <strong>stoichiometry</strong>.
+            </div>
+          </div>
+
+          <p>
+            “Essentially, I bypassed all the fundamental ingredients of 
+              <span 
+              class="dotted-underline"
+              data-bs-toggle="popover"
+              data-bs-placement="top"
+              data-bs-trigger="hover"
+              data-bs-title="Substitute..."
+              data-bs-content="aquaculture water chemistry">Physics</span>
+            .
+          </p>
+
+          <p>
+            “I go directly from data to data... There is no law of 
+              <span 
+              class="dotted-underline"
+              data-bs-toggle="popover"
+              data-bs-placement="top"
+              data-bs-trigger="hover"
+              data-bs-title="Substitute..."
+              data-bs-content="aquaculture water chemistry">Physics</span> 
+            in the middle.”
+          </p>
+
+          <p>And that is the ML approach.</p>
+
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="ml-wqmap"></div>
+
+          <p
+            style=
+              "font-weight: 250;
+              font-size: 0.95rem;
+              text-align: center;"
+          >
+            <!-- [{/* <em style="font-weight: 500;">suggestion</em>:  */} -->
+            <em style="font-weight: 500;">Hover</em> over (on mobile, 
+            <em style="font-weight: 500;">click</em>) 
+            <span class="dotted-underline" style="cursor: auto">
+              underlined segments
+            </span> 
+            in Qin's statements above to see the connection to
+            aquaculture.]
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <!-- {/* ML & THE WQ MAP */} -->
+    <div
+      class="ml-heading-div">
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        What does ML have to do with The WQ Map?
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a 
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul" ></i>
+        </a>
+      </h2>
+    </div>
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p>
+            The current version of the WQ Map has traditional stoichiometric
+            relationships at the core of its chemical calculations. 
+            <span style="font-size: 0.95rem">
+              [<em>Stoichiometry</em> is the branch of chemistry that
+              quantifies relationships among substances in a chemical
+              reaction.]
+            </span>
+          </p>
+
+          <!-- {/* Homer Fermat */} -->
+          <div
+            style=
+              "text-align: center;
+              margin-top: 25px;
+              margin-bottom: 20px;"
+          >
+            <img
+              class="about-image"
+              src="images/wqmap_feed_effect.png"
+              alt="WQ Map with Feed Effect Vector"
+            />
+            <small>
+              <strong>WQ Map</strong> with inital 
+              <span>
+                <i
+                  class="fas fa-map-pin"
+                  style=
+                    "color: blue;
+                    font-size: 0.95rem;"
+                ></i>
+              </span> 
+              &amp; target 
+              <span>
+                <i
+                  class="fas fa-map-marker-alt"
+                  style=
+                    "color: darkolivegreen;
+                    font-size: 0.95rem;"
+                  }}
+                ></i>
+              </span> 
+              waypoints, and the feed-effect vector.
+            </small>
+          </div>
+
+          <p>
+            This traditional approach, as noted above, has a limited ability
+            to characterize the complex web of dynamic, non-linear
+            interactions that compose real-world RAS.
+          </p>
+
+          <p>
+            One way to take the WQ Map to the next level: An ML model that
+            forecasts water quality &amp; growth, given the most recent 
+            <em>d</em> days (or <em>h</em> hours) of sensor &amp; sampling
+            data.
+          </p>
+
+          <!-- {/* "TinyML optimises ML models to run space and require less computational power to use." */} -->
+          <p>
+            Preferably, TinyML techniques would fit the model “at the edge”
+            to avoid a round-trip to the Cloud for processing. (Beyond the
+            added efficiency, this is essential in facilities with limited
+            connectivity.)
+          </p>
+
+          <p>
+            <span class="highlight-text-green">
+            Such a model might predict the effect of carbohydrate additions
+            on water quality &amp; biofloc aggregates, thereby helping to
+            solve a critical management problem in RAS biofloc.
+            </span>
+          </p>
+
+          <p style="margin-bottom: 0">
+            Additional ML applications that would enhance the WQ Map
+            software package:
+          </p>
+
+          <ul class="list-ml-spacing">
+            <li>
+              <strong>Detection of water-quality anomalies</strong> much
+              more quickly &amp; confidently than possible by a human
+              operator, especially in high-density, warm-water RAS, in which
+              the culture environment can change very rapidly.
+            </li>
+
+            <li>
+              <strong>
+                Coordinating flow between biofloc &amp; algae units
+              </strong> 
+              in an Integrated Multi-Trophic Aquaculture (
+              <strong>IMTA</strong>) system, the better to improve
+              sustainability by sequestering biofloc-produced CO<sub>2</sub> in
+              marketable plant biomass.
+            </li>
+
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="data-aug"></div>
+
+          </ul>
+
+          <p>
+            The road to upgraded RAS sustainability &amp; profitability is
+            paved with ML.
+          </p>
+
+          <p>
+            <span class="highlight-text-green">
+              But there’s a barrier that blocks the path.
+            </span>
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <!-- {/* DATA AUGMENTATION */} -->
+    <div
+      class="ml-heading-div" >
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        Data Augmentation
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul" ></i>
+        </a>
+      </h2>
+    </div>
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p>
+            ML is a glutton for high-quality data, and 
+            <a
+              class="ml-link"
+              href="https://research.google/pubs/pub49953/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              data is the "critical infrastructure"
+            </a> 
+            at the foundation of robust machine learning models.
+          </p>
+
+          <p>
+            <span class="highlight-text-green">
+            It’s not always feasible, however, to collect enough data to
+            satisfy ML's appetite; and without sufficient data, model
+            predictions suffer.
+            </span>
+          </p>
+
+          <p>
+            This generally is the case for RAS, as it takes 3 - 4 months to
+            collect a time-series dataset for a single crop. Additionally,
+            the cost of introducing realistic -- and potentially
+            crop-threatening -- water-quality changes into a production tank
+            (to train an anomaly-detection model) is unacceptably high.
+          </p>
+
+          <p>
+            When you don’t have (or otherwise are unable to collect) enough
+            data to train a strong ML model, one possible remedy is data
+            augmentation.
+          </p>
+
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="flesh-and-blood"></div>
+
+          <p>
+            Similar to bootstrapping in Statistics, existing RAS datasets
+            can be leveraged to produce 
+            <a class="ml-link"
+              href="https://sdtimes.com/ai/forrester-5-key-advances-driving-ai-2-0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              synthetic data
+            </a> 
+            by using deep neural networks configured as Variational
+            Auto-Encoders (<strong>VAE</strong>) or Generative Adversarial
+            Networks (<strong>GAN</strong>).
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+    <!-- {/* Wither Domain Experience? */} -->
+    <div
+      class="ml-heading-div">
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        The role of flesh-and-blood aquaculturists
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul" ></i>
+        </a>
+      </h2>
+    </div>
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p>
+            With the success of ML in other fields and its potential to
+            advance RAS operations, it's fair to ask...
+          </p>
+
+          <p style="text-align: center; font-size: 1.65rem; padding:0.75rem 0;">
+            <em>Is there any room left for experienced aquaculturists?</em>
+          </p>
+          <p>
+            The answer: <em>Yes, of course.</em> The aquaculturist still
+            plays <em>the</em> central role in RAS management.
+          </p>
+
+          <p>
+            Besides supplying "the other ML" -- the Manual Labor that
+            actually produces seafood -- 
+            <span class="highlight-text-green">
+              the domain knowledge of experienced aquaculturists is an
+              essential part of the ML workflow
+            </span>
+            : collecting, processing, &amp; curating the data on which the
+            models feed, and interpreting the model output.
+          </p>
+
+          <p>
+            Maybe surprisingly, experienced RAS aquaculturists also have an
+            important role in model development.
+          </p>
+
+          <p>
+            The most successful ML models are not only about deep math, but
+            combine efficient machine-learning models with deep
+            domain knowledge:
+          </p>
+
+          <p
+            style=
+              "font-size: 1rem;
+              margin-left: 25px;
+              margin-right: 25px;"
+          >
+            <em>
+              "Contrary to public belief, [driverless cars] are not powered
+              by one massive monolithic model connecting sensors to steering
+              wheel. Instead, their incredible capabilities are provided by
+              a collage of specialized deep learning and hand-coded
+              algorithms working in concert."
+            </em> 
+            (see: 
+            <a class="ml-link"
+              href="https://www.forbes.com/sites/kalevleetaru/2019/04/18/waymo-reminds-us-successful-complex-ai-combines-deep-learning-and-traditional-code/?sh=265a31f93a2c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            )
+          </p>
+
+          <p>
+            In our case, 
+            <span class="highlight-text-green">
+              the hand-coded rules will be based on the accumulated
+              practical experience of RAS aquaculturists
+            </span> 
+            and certain stoichiometric features of RAS water chemistry.
+          </p>
+
+          <p>
+            If successful, we'll have a foundation for developing more
+            robust software tools for recirc aquaculture management than
+            presently available.
+          </p>
+
+          <div id="next"></div>
+
+          <p>
+            Such tools, in turn, would contribute to expanding local
+            production of healthy, fresh-from-the-tank seafood in
+            sustainable aquaculture systems 
+            <span class="highlight-text-green">
+              for both subsistence and premium applications
+            </span>
+            .
+          </p>
+        </div>
+      </Col>
+    </Row>
+
+
+    <!-- {/* NEXT STEPS */} -->
+    <div
+      class="ml-heading-div"
+    >
+      <h2
+        class="section-title-test-problem"
+        style='margin-left: 12px'
+      >
+        Next Steps
+      </h2>
+      <h2
+        class="section-title-test-problem"
+        style='margin-right: 12px; font-size: 1.85rem'
+      >
+        <a
+          href="#toc"
+          title="Go to Table of Contents"
+        >
+          <i class="fas fa-list-ul" ></i>
+        </a>
+      </h2>
+    </div>
+    
+    <Row>
+      <Col md={{ span: 10, offset: 1 }}>
+        <div class="ml-para-content-div">
+          <p>
+            The current version of the WQ Map — the traditional
+            stoichiometric version — remains a valuable tool that advances
+            the state of aquaculture water-chemistry analytics.
+          </p>
+
+          <p>
+            Adding ML will extend the WQ Map's forecasting capabilities and
+            equip aquaculturists with leading-edge software that improves
+            RAS production and environmental sustainability.
+          </p>
+
+          <!-- {/* <p>
+            For example, instead of dealing with the stoichiometry of
+            biological &amp; chemical processes separately, and then
+            combining them without accounting explicitly for their
+            interaction, the ML deal with them together, without dubious
+            complexity of stoichiometric linking.
+          </p> */} -->
+
+          <p>
+            <span class="highlight-text-green">
+            The ML approach also opens the door for real-time, crop-specific
+            predictions instead of static, one-size-fits-all stoichiometric
+            predictions. That will significantly advance RAS water-quality
+            management.
+            </span>
+          </p>
+
+          <!-- {/* [NB] PUT target for next section HERE, owing to sticky panel with buttons */} -->
+          <div id="blather"></div>
+
+          <!-- <p>
+            I’m still fleshing out this idea, including (1) identifying the
+            types &amp; sources of domain expertise that must be attached,
+            (2) analyzing the minimum scale of production infrastructure
+            that must be assembled for validation, and (3) estimating the
+            project cost.
+          </p> -->
+
+          <!-- <hr
+            class="hr-white"
+            style="margin-top: 35px; margin-bottom: 15px;"
+          />
+
+          <p style="margin-top: 25px">
+            This topic has been on my radar for some time now, but much of
+            what I’ve put together above is owed to the vocabulary and
+            concepts that I learned in 
+            <a class="ml-link"
+              href="https://www.edx.org/course/fundamentals-of-tinyml"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vijay Reddi’s three-part TinyML HarvardX course</a>. It crystalized my ideas and opened the door to that domain’s
+            literature.
+          </p> -->
+
+        </div>
+      </Col>
+    </Row>
+
+    <hr class="hr-white" style="margin-bottom: 45px" />
+
+        <!-- <div
+          id="ml-optional-blather">
+
+          <div
+            class="ml-heading-div">
+            <h2
+              class="section-title-test-problem"
+              style='margin-left: 12px'
+            >
+              Optional blather...
+            </h2>
+            <h2
+              class="section-title-test-problem"
+              style='margin-right: 12px; font-size: 1.85rem'
+            >
+              <a
+                href="#toc"
+                style="text-decoration: none"
+                title="Go to Table of Contents"
+              >
+                <i class="fas fa-list-ul" ></i>
+              </a>
+            </h2>
+          </div>
+
+          <hr class="hr-white" style="margin-bottom: 15px" />
+
+          <p>
+            Extending the example in the first section: A comprehensive
+            traditional model of RAS CO{subTwo} might incorporate formulae
+            for time-varying...
+          </p>
+          <ul style="line-height: 1.5rem">
+            <li style="margin-bottom: 12px">
+              <strong>physical processes</strong> (<em>e.g.</em>, aeration
+              transfer rate &amp; bubble size, diffusive transport across
+              the air/water interface, stripping efficiency...)
+            </li>
+            <li style="margin-bottom: 12px">
+              <strong>chemical processes</strong> (<em>e.g.</em>, the full
+              scope of carbonate system dynamics — especially of pH &amp;
+              alkalinity)
+            </li>
+            <li style="margin-bottom: 12px">
+              <strong>biological processes</strong> (<em>e.g.</em>, growth,
+              respiration, survival, microbial metabolism...)
+            </li>
+          </ul>
+          <p>
+            That would require an heroic data-collection effort and a wealth
+            of domain expertise.
+          </p>
+          <p>
+            If you could write the equations that (more-or-less)
+            exhaustively describe that complex system, you then would have
+            to supply the parameter values (the coefficients of the
+            variables) for each equation. (
+            <em>Where would you get them?</em>)
+          </p>
+          <p>
+            If you got that far, you then would have to solve a
+            high-dimensional non-linear dynamic system of equations.
+          </p>
+          <p>
+            Much easier said than done. Such a system would not admit an
+            analytic solution; that is, you couldn’t solve it in a way that
+            had all of the unknowns on one side and all of the parameters
+            stuffed into computable mathematical functions on the other.
+          </p>
+
+          <div style="text-align: center; margin-bottom: 0">
+            <img
+              class="about-image"
+              src='images/Homer_Fermat.png'
+              alt="Homer attempting proof of Fermat"
+            />
+            <small>
+              Homer's no 
+              <a class="ml-link"
+                href="https://en.wikipedia.org/wiki/Wiles%27s_proof_of_Fermat%27s_Last_Theorem"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Andrew Wiles
+              </a>
+              .
+            </small>
+          </div>
+
+          <p>Instead, you’d have to solve it numerically.</p>
+          <p>
+            Without delving into the digital details, that task involves
+            significant computational issues of its own. One example: if you
+            don't assign the initial conditions correctly...you might not
+            get a stable solution (<em>vide</em> 
+            <a class="ml-link"
+              href="https://en.wikipedia.org/wiki/Butterfly_effect"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The Butterfly Effect
+            </a>
+            ).
+          </p>
+          <p>
+            Without a usable solution, you’d be left with an impressive set
+            of equations that afforded insight into your theoretical
+            understanding of the workings of the system, but little (or no)
+            predictive advantage to assist you in your real work.
+          </p>
+          <p>
+            In practice, you would “artfully” apply your domain knowledge to
+            reduce the system’s dimensionality, thus making it more
+            mathematically tractable. That’s a fancy way of saying that
+            you’d toss out some information to make the equations easier to
+            solve — but those simplifying assumptions would bias the model,
+            sacrificing its generality and reducing its predictive power.
+          </p>
+
+          <hr class="hr-white" />
+
+          <p id="ml-blather-bottom-line"
+          >
+            <em>Bottom-line</em>: The limitations of traditional
+            stoichiometric models make a convincing argument for developing
+            ML models to advance precision RAS management.
+          </p>
+        </div> -->
+
+    <!-- Footer
+  class="footer py-1" -->
+    <footer>
+      <!-- <footer class="footer bg-dark py-1"> -->
+      <article>
+        <navbar-wqmap>
+          <nav>
+            <ul class="footer-nav">
+              <li><a class="selectedNavMenu" href="index.html">Home</a></li>
+              <!-- <li><a href="tldr.html">tl;dr</a></li> -->
+              <li><a href="about.html">About...</a></li>
+            </ul>
+          </nav>
+        </navbar-wqmap>
+      </article>
+      <p>&copy; 2022 --Nick/ Staresinic</p>
+    </footer>
+
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      // var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      //   return new bootstrap.Popover(popoverTriggerEl);
+      // });
+      // see: https://stackoverflow.com/questions/66899307/bootstrap-5-popover-with-html-content
+      popoverTriggerList.map((el) => {
+        // list.map((el) => {
+        let opts = {
+          animation: false,
+        };
+        if (el.hasAttribute("data-bs-content-id")) {
+          opts.content = document.getElementById(
+            el.getAttribute("data-bs-content-id")
+          ).innerHTML;
+          opts.html = true;
+        }
+        new bootstrap.Popover(el, opts);
+      });
+    </script>
+  </body>
+</html>

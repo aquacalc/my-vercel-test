@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/real-highlight.css" />
+    <link rel="stylesheet" href="/css/scroll-animate.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Animate.css Page Transitions -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>The WQ Manual</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-3.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
+  </head>
+
+  <body
+    class="animate__animated animate__fadeIn"
+    id="body-scroll-animate"
+    style="background-color: var(--color-gray-100)"
+  >
+    <!-- navbar-wqmap -->
+    <div class="navbar-wqmap">
+      <div class="container-index flex">
+        <h3 class="logo">
+          <a href="index.html">The WQ ToolBox<sup>+</sup></a>
+        </h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li title="The WQ Map">
+              <a href="scroll-wqmap.html"
+                ><i class="fas fa-map-marker-alt"></i
+              ></a>
+            </li>
+            <li title="The WQ ToolBox">
+              <a href="scroll-wqtoolbox.html"><i class="fa fa-tools"></i></a>
+            </li>
+            <li title="The WQ Manual">
+              <a class="selectedNavMenu" href="#"><i class="fa fa-book"></i></a>
+            </li>
+            <li style="margin-top: 0.25rem" title="ML & RAS">
+              <a href="ml-and-the-wq-map.html"
+                ><img
+                  class="ml-img"
+                  id="ml-icon"
+                  style="
+                    border-radius: 2px;
+                    box-shadow: none;
+                    background-color: #e5e2e2;
+                    width: 1rem;
+                  "
+                  src="/images/deep-learning.png"
+                  alt="machine learning"
+              /></a>
+            </li>
+            <li>
+              <a href="about.html">About...</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- HEAD -->
+    <section class="what-is-and-bullets">
+      <div class="container-index grid-for-scroll-pages">
+        <article>
+          <!-- <article id="contain-stacked-icons"> -->
+          <i class="fa fa-book fa-md fa-stack-2x wq-icon-for-scroll-page"></i>
+
+          <h1 class="section-title">
+            What is the<br /><span>WQ Manual</span>?
+          </h1>
+          <p class="lead">an interactive resource for WQ training</p>
+        </article>
+        <div>
+          <div class="wqtoolbox-bullets">
+            <ul class="list-display list-checkmarks-wqmanual">
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  The WQ Manual explains basic water-quality concepts &amp;
+                  introduces essential vocabulary
+                </span>
+                <span class="bullet-sub-text">
+                  to help non-tech users become more effective &amp; confident
+                  WQ managers.</span
+                >
+              </li>
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  Technical topics are made accessible through a conversational
+                  style</span
+                >
+                <span class="bullet-sub-text"
+                  >instead of the more formal style found in scientific
+                  journals.</span
+                >
+              </li>
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  Equations are used sparingly
+                </span>
+                <span class="bullet-sub-text"
+                  >and illustrated as needed with interactive visualizations.
+                  These WQ playgrounds allow readers to reinforce important
+                  features of water chemistry by playing with an equation's
+                  parameters.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="scroll-animate-container">
+      <section class="scroll-animate-card">
+        <h3 class="h3-above-img">Competence + Comprehension</h3>
+        <img
+          src="images/manual-first-page.png"
+          alt="Competence + Comprehension"
+        />
+        <div>
+          <h3>Competence + Comprehension</h3>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ Map</span> &amp; the
+            <span class="wq-toolbox-highlight">WQ ToolBox</span> provide users
+            with the <em style="font-weight: 400">competence</em> to control
+            aquaculture water quality.
+          </p>
+          <p>
+            This means that
+            <span class="realistic-marker-highlight"
+              >the software can be used
+              <span style="font-weight: 400">without</span> understanding the
+              principles of natural water chemistry.</span
+            >
+          </p>
+          <p>
+            The companion
+            <span class="wq-toolbox-highlight">WQ Manual</span> builds
+            <em style="font-weight: 400">comprehension</em> by diving into
+            important water-chemistry principles at the core of the software.
+          </p>
+          <p>
+            <em
+              >But
+              <span class="realistic-marker-highlight"
+                >why bother to learn tech principles</span
+              >
+              if the software is all I need to manage my water chemistry?</em
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">
+          <em>Why bother with tech principles...?</em>
+        </h3>
+        <img
+          src="images/manual-toc.png"
+          alt="Why bother with tech principles?"
+        />
+        <div>
+          <h3><em>Why bother with tech principles...?</em></h3>
+          <p style="margin-bottom: 0">
+            <em>Short answer:</em> You don't have to swim in the deep end of
+            chemistry &amp; math to control WQ; just use the software.
+          </p>
+          <p style="font-size: 0.85rem; margin-bottom: 0; line-height: 0.95rem">
+            (Similarly, you don't have to comprehend the physics of the internal
+            combustion engine to be competent to drive a car.)
+          </p>
+          <p style="margin-bottom: 0">
+            <span class="realistic-marker-highlight"
+              >But if you do take the plunge,</span
+            >
+            you'll be able to...
+          </p>
+          <ul style="margin-bottom: 0; line-height: 1.5rem; font-size: 0.95rem">
+            <!-- <li>...better grasp the meaning of the software results</li> -->
+            <li>...scrape more info &amp; insight from the tech literature</li>
+            <li>...communicate more effectively with colleagues</li>
+            <li>...ask better questions of tech specialists</li>
+            <li>...<em>understand technical explanations</em></li>
+          </ul>
+          <p>
+            In short,
+            <span class="realistic-marker-highlight"
+              >competence + comprehension will make you a more complete &amp;
+              confident WQ manager</span
+            >.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Outline key concepts</h3>
+        <img src="images/manual-keywords.png" alt="empty wq map" />
+        <div>
+          <h3>Outline key concepts</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Essential concepts at the foundation of aquaculture WQ</span
+            >
+            -- <em>e.g.</em>, alkalinity, pH scales, chemical activity,
+            ammonia-N <em>vs.</em> ammonia... -- often are poorly understood or
+            even ignored.
+          </p>
+          <p>
+            That limits how far a user can advance their understanding of
+            aquaculture WQ management.
+          </p>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ Manual</span> addresses
+            this in several ways.
+          </p>
+          <p>
+            For example, it
+            <span class="realistic-marker-highlight"
+              >reduces the confusion of scientific jargon</span
+            >
+            by presenting vocabulary &amp; key take-aways with plain-language
+            explanations.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">De-mystify the math &amp; chem</h3>
+        <img src="images/manual-get-h-plus.png" alt="De-mystify the math" />
+        <div>
+          <h3>De-mystify the math &amp; chem</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Chemical &amp; math equations typically are high hurdles</span
+            >
+            to overcome in aquaculture WQ discussions for all but specialists.
+          </p>
+          <p>
+            Some sources opt for no (or very few) equations. That places a
+            strict limit on how well important WQ topics can be developed.
+          </p>
+          <p>
+            Standard WQ texts are replete with equations on every page, but that
+            approach limits their audience to academics.
+          </p>
+          <p style="margin-bottom: 0">
+            The <span class="wq-toolbox-highlight">WQ Manual</span> strikes a
+            balance:
+            <span class="realistic-marker-highlight"
+              >Key equations are explained in a step-by-step manner</span
+            >
+            and, when needed,
+            <span class="realistic-marker-highlight"
+              >interactive playgrounds</span
+            >
+            are used to enhance understanding.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">WQ playgrounds</h3>
+        <img src="/images/manual-ph-change.png" alt="First image" />
+        <div>
+          <h3>WQ playgrounds</h3>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ Manual</span> supplements
+            explanations of aquaculture water chemistry concepts with
+            interactive playgrounds.
+          </p>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Interactivity is more effective than traditional media</span
+            >
+            alone -- text, tables, static graphs, &amp; equations. It
+            <span class="realistic-marker-highlight"
+              >engages users in a way that brings complicated tech concepts to
+              life</span
+            >.
+          </p>
+          <p>
+            <a
+              href="https://aquacalc.github.io/ph_ch3/#power-of-ten"
+              target="_blank"
+              rel="noopener noreferrer"
+              >The example illustrated here</a
+            >
+            clarifies the non-linear nature of pH: Small pH changes represent
+            large changes in acidity. Users change pH values and see
+            surprisingly large increases (or decreases) in culture-water
+            acidity. This contributes to cementing the need for precise WQ
+            management.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">WQ Whack-a-Mole</h3>
+        <img src="/images/manual-stoplight-game.png" alt="First image" />
+        <div>
+          <h3>Water Quality Whack-a-Mole</h3>
+          <p>
+            The
+            <a
+              href="https://aquacalc.github.io/ph_ch1/#one-size"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Water Quality Whack-a-Mole</a
+            >
+            game is another interactive playground in the
+            <span class="wq-toolbox-highlight">WQ Manual</span>.
+          </p>
+          <p>
+            The goal is to
+            <span class="realistic-marker-highlight"
+              >help users understand a non-trivial aspect of managing pH</span
+            >
+            that's much more difficult to motivate with words &amp; equations
+            alone.
+          </p>
+          <p>
+            As users change pH &amp; TA-N, they get clear visual feedback on
+            whether or not their chosen pH is optimal.
+          </p>
+          <p>
+            This
+            <span class="realistic-marker-highlight"
+              >builds an intuitive understanding</span
+            >
+            of a key WQ management problem that is at the core of the
+            <span class="wq-toolbox-highlight">WQ Map</span>.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Dispelling misconceptions</h3>
+        <img src="/images/manual-tool-neutral-ph.png" alt="Neutral pH" />
+        <div>
+          <h3>Dispelling misconceptions</h3>
+          <p>
+            WQ playgrounds also are useful for
+            <span class="realistic-marker-highlight"
+              >clearing up a few common misconceptions</span
+            >
+            about aquaculture water chemistry.
+          </p>
+          <p>
+            For example: neutral pH is not always 7.0; changing CO<sub>2</sub>
+            does not affect alkalinity; and adding only bicarbonate almost never
+            is sufficient for managing water quality.
+          </p>
+          <p>
+            The
+            <a
+              href="https://aquacalc.github.io/ph_ch3/#neutral-ph"
+              target="_blank"
+              rel="noopener noreferrer"
+              >interactive playground pictured here</a
+            >
+            lets users change temperature &amp; salinity to visualize how
+            neutral pH depends on both and can vary significantly from 7.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">3<sup>rd</sup>-party videos</h3>
+        <img src="/images/manual-video.png" alt="Neutral pH" />
+        <div>
+          <h3>3<sup>rd</sup>-party videos</h3>
+          <p>
+            Several third-party videos are included in the
+            <span class="wq-toolbox-highlight">WQ Manual</span> to enhance
+            certain content.
+          </p>
+          <p>
+            <span class="realistic-marker-highlight"
+              >This is the tactic of 'effective redundancy'</span
+            >: After presenting a topic, repeating the same material in a
+            different "voice" and with a different presentation style
+            <span class="realistic-marker-highlight"
+              >reinforces concepts that become more familiar with each
+              repetition</span
+            >.
+          </p>
+          <p>
+            Pictured here, an explanatory video on the standard glass electrode
+            used for pH measurements, along with an introduction to the
+            solid-state ISFET pH sensor.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Supplemental material - tech</h3>
+        <img src="/images/manual-popcorn.png" alt="First image" />
+        <div>
+          <h3>Supplemental material - tech</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Optional material -- technical &amp; historical</span
+            >
+            -- is available throughout the
+            <span class="wq-toolbox-highlight">WQ Manual</span> in expandable
+            panels.
+          </p>
+          <p>
+            Tech topics delve deeper into, for example, the difference between
+            concentration &amp; activity; moles as a fundamental unit of
+            concentration; the seawater pH scales; and how to calculate ionic
+            strength.
+          </p>
+          <p>
+            Where possible (as in the accompanying popcorn images),
+            <span class="realistic-marker-highlight"
+              >familiar analogies help wring some of the "tech" out of otherwise
+              confusing water chemistry topics.</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Supplemental material - history</h3>
+        <img src="/images/manual-hbk.png" alt="First image" />
+        <div>
+          <h3>Supplemental material - history</h3>
+          <p>
+            Other optional panels present users with some
+            <span class="realistic-marker-highlight"
+              >brief historical background on topics related to natural water
+              chemistry.</span
+            >
+          </p>
+          <p>
+            These include: the meaning of the <em>p</em> in pH (a small, but
+            interesting, matter); the origins of the ubiquitous pH electrode;
+            and why base-10 logarithms are used to define pH.
+          </p>
+          <p>
+            Such side-issues are not directly related to the practice of
+            aquaculture water-quality management, but they
+            <span class="realistic-marker-highlight"
+              >satisfy the curiosity of many users</span
+            >
+            and add a bit of depth to their general knowledge of water
+            chemistry.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <article>
+        <nav>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="tldr.html">tl;dr</a></li> -->
+            <li>
+              <a href="about.html">About...</a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+      <p>&copy; 2022 --Nick/ Staresinic</p>
+    </footer>
+
+    <svg
+      xmlns="//www.w3.org/2000/svg"
+      version="1.1"
+      class="svg-filters"
+      style="display: none"
+    >
+      <defs>
+        <filter id="marker-shape">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0 0.15"
+            numOctaves="1"
+            result="warp"
+          />
+          <feDisplacementMap
+            xChannelSelector="R"
+            yChannelSelector="G"
+            scale="30"
+            in="SourceGraphic"
+            in2="warp"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- see: https://github.com/michalsnik/aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // offset: 140,
+        duration: 650,
+      });
+    </script>
+  </body>
+</html>

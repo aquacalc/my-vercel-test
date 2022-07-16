@@ -1,0 +1,225 @@
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  z-index: 2;
+  display: none;
+}
+
+/* #modal-window {
+  visibility: hidden;
+} */
+
+/* from: https://medium.com/@josephat94/a-simple-but-awesome-animation-with-css3-for-your-modals-eb24ebe4ab99 */
+.shadow {
+  z-index: 1;
+  position: fixed; /* if 'absolute', height doesn't extend to full page */
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Max's code */
+.modal-content {
+  position: fixed;
+  top: 12%;
+  left: 5%;
+  width: 90%;
+  background-color: rgb(243, 241, 241);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  /* see: https://medium.com/@ResearchNowEng/making-perfectly-sized-centered-scrollable-modals-a36da09b68e6 */
+  overflow: auto;
+  max-height: calc(100vh - 125px);
+
+  /* z-index: 2;
+  display: none; */
+  /* transition: opacity 2000ms ease-in; */
+
+  /* z-index: -1;
+  opacity: 0;
+  transform: scale(0); */
+}
+
+/* NB: NB: NB: */
+/* Because **CASCADING** Style Sheets... */
+/* !! .hideModal rule must come before .showModal rule !! */
+/* NB: NB: NB: */
+.initModalClosed {
+  z-index: -1;
+  opacity: 0;
+  /* animation: hide 0.75s ease-in; */
+  transform: scale(0);
+}
+
+.hideModal {
+  z-index: -1;
+  opacity: 0;
+  animation: hide 0.75s ease-in;
+  transform: scale(0);
+}
+@keyframes hide {
+  from {
+    z-index: 2;
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    z-index: -1;
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.showModal {
+  opacity: 1;
+  z-index: 2;
+  animation: show 0.75s ease-in;
+  transform: scale(1);
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    z-index: -1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    z-index: 2;
+    transform: scale(1);
+  }
+}
+
+/* .openModal {
+  z-index: 2;
+  opacity: 1;
+  animation: open 0.75s ease-in;
+  transform: scale(1);
+  display: none;
+}
+@keyframes open {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    z-index: -1;
+    display: none;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+    display: block;
+  }
+} */
+
+/* see: https://medium.com/@ResearchNowEng/making-perfectly-sized-centered-scrollable-modals-a36da09b68e6 */
+/* .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 38rem;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+} */
+
+.modal-content-title {
+  position: sticky;
+  top: 0;
+  left: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  /* color: #2b3629; */
+  color: rgb(237, 240, 252);
+  background-color: rgba(43, 137, 226, 0.95);
+}
+
+/* .modal-content-paras { */
+/* overflow-y: scroll; */
+/* padding: 5rem; */
+/* } */
+
+.modal-content-paras h3 {
+  font-size: 1.5rem;
+  padding: 0 2.5rem;
+  margin-top: 0.75rem;
+}
+
+.modal-content-para {
+  font-size: 1.5rem;
+  padding: 0 2.5rem;
+  padding-bottom: 0.618rem;
+  color: #3a3a3a;
+  /* line-height: 2.5rem; */
+}
+
+/* Insert item name (e.g., pH, Alkalinity...) as needed */
+.insert-item {
+  font-weight: bold;
+  color: rgb(55, 25, 221);
+}
+
+.modal-content-btn {
+  text-align: center;
+}
+
+.btn {
+  font: inherit;
+  font-size: 1.5rem;
+  padding: 0.25rem 2.5rem;
+  margin: 1rem 2rem 2rem 0;
+
+  color: #8b8a8a;
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* .modal-close-btn {
+  color: #8b8a8a;
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+.modal-close-btn:hover {
+  background-color: rgb(156, 203, 247);
+  color: #292929;
+}
+
+/* .modal-deeper-info-btn {
+  color: #8b8a8a;
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+.modal-deeper-info-btn:hover {
+  background-color: rgb(191, 155, 221);
+  color: #292929;
+}
+
+/* MEDIA QUERIES */
+/* to accommodate Surface Duo */
+/* @media (min-width: 720px) { */
+/* @media (min-width: 48rem) { */
+@media (min-width: 768px) {
+  .modal {
+    left: calc(50% - 30rem);
+    width: 60rem;
+    /* transition: opacity 2000ms ease-in; */
+  }
+}

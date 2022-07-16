@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/real-highlight.css" />
+    <link rel="stylesheet" href="/css/scroll-animate.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Animate.css Page Transitions -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>The WQ Map</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-3.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
+  </head>
+
+  <body
+    class="animate__animated animate__fadeIn"
+    id="body-scroll-animate"
+    style="background-color: var(--color-gray-100)"
+  >
+    <!-- navbar-wqmap -->
+    <div class="navbar-wqmap">
+      <div class="container-index flex">
+        <h3 class="logo">
+          <a href="index.html">The WQ ToolBox<sup>+</sup></a>
+        </h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li title="The WQ Map">
+              <a class="selectedNavMenu" href="#"
+                ><i class="fas fa-map-marker-alt"></i
+              ></a>
+            </li>
+            <li title="The WQ ToolBox">
+              <a href="scroll-wqtoolbox.html"><i class="fa fa-tools"></i></a>
+            </li>
+            <li title="The WQ Manual">
+              <a href="scroll-wqmanual.html"><i class="fa fa-book"></i></a>
+            </li>
+            <li style="margin-top: 0.25rem" title="ML & RAS">
+              <a href="ml-and-the-wq-map.html"><img
+                class="ml-img"
+                id="ml-icon"
+                style="border-radius: 2px; box-shadow: none; background-color: #e5e2e2; width: 1.0rem;"
+                src="/images/deep-learning.png"
+                alt="machine learning"
+              /></a>
+            </li>
+            <li>
+              <a href="about.html">About...</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- HEAD -->
+    <section class="what-is-and-bullets">
+      <div class="container-index grid-for-scroll-pages">
+        <article id="contain-stacked-icons">
+          <span class="fa-stack fa-lg">
+            <i
+              class="fas fa-map-marker-alt fa-stack-2x"
+              id="wqmap-marker-stacked"
+            ></i>
+            <i
+              class="fa fa-water fa-stack-2x text-danger"
+              id="wqmap-water-stacked"
+            ></i>
+          </span>
+
+          <h1 class="section-title">What is the<br /><span>WQ Map</span>?</h1>
+          <p class="lead" style="margin-bottom: 0">
+            manage RAS water chemistry...</sup>
+          </p>
+          <p class="lead" style="margin-top: 0">
+            ...as simply as using Google Maps<sup><small>TM</small></sup>
+          </p>
+        </article>
+        <div>
+          <div class="wqtoolbox-bullets">
+            <ul class="list-display list-checkmarks-wqmap">
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  Anyone who uses Google Maps<sup><small>TM</small></sup> will
+                  be able to control water chemistry with the WQ Map
+                </span>
+                <span class="bullet-sub-text"
+                  >quickly &amp; accurately after <em>less than</em> 30 minutes
+                  of training.</span
+                >
+              </li>
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  The WQ Map boosts daily productivity</span
+                >
+                <span class="bullet-sub-text"
+                  >, guides remediation of exceptional water-quality problems,
+                  &amp; greatly reduces staff training time.</span
+                >
+              </li>
+              <li>
+                <span style="font-size: 1.07rem; font-weight: 600; color: blue">
+                  The WQ Map lowers a tech barrier that limits RAS adoption:
+                </span>
+                <span class="bullet-sub-text">
+                  It makes precision water-quality management accessible to
+                  aquaculture entrepreneurs who have valuable husbandry &amp;
+                  mechanical skills but neither a deep background in chemistry
+                  nor deep pockets to fully automate a production
+                  facility.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tzachi-book-link">
+      <p>
+        For a thorough introduction,
+        <a href="/index.html"><strong>request a demo</strong></a> and/or
+        <em>see:</em> Appendix V in
+        <a
+          href="https://www.amazon.com/Sustainable-Biofloc-Systems-Marine-Shrimp/dp/0128180404/ref=sr_1_1?dchild=1&keywords=samocha+biofloc&qid=1617745959&sr=8-1&asin=B07WVBXQ1S&revisionId=&format=2&depth=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><strong>Tzachi Samocha's biofloc book</strong></a
+        >.
+      </p>
+    </div>
+
+    <main class="scroll-animate-container">
+      <section class="scroll-animate-card">
+        <h3 class="h3-above-img">
+          The Water-Quality Map (<strong>WQ Map</strong>)
+        </h3>
+        <img src="images/__000WqMap_init.png" alt="empty wq map" />
+        <div>
+          <h3>The Water-Quality Map (<strong>WQ Map</strong>)</h3>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ Map</span> is an
+            innovative tool for <span class="realistic-marker-highlight"
+            >quick &amp; precise management of water
+            chemistry</span> in recirc aquaculture systems.
+          </p>
+          <p>
+            Anyone who plans their travel with Google Maps<sup
+              ><small>TM</small></sup
+            >
+            already has the skills to control aquaculture water quality with the
+            <span class="wq-toolbox-highlight">WQ Map</span> --
+            <span class="realistic-marker-highlight"
+              >no background in natural water chemistry required</span
+            >.
+          </p>
+          <p>
+            The map sits in the center of the top row. Input controls modify its
+            appearance &amp; output panels display results.
+          </p>
+          <p>
+            The main input panel slides out by tapping the green vertical strip
+            along the left border.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Entering WQ data</h3>
+        <img src="images/__000WqMap_sidedrawer.png" alt="Enter WQ data" />
+        <div>
+          <h3>Entering WQ data</h3>
+          <p>
+            The sidedrawer has six accordion controls that individually toggle
+            to expose
+            <span class="realistic-marker-highlight"
+              >inputs for data that all facilities collect</span
+            >
+            to describe water-quality state.
+          </p>
+          <p>
+            At a minimum, these include water volume, temperature, salinity, pH,
+            alkalinity, &amp; Total Ammonia-Nitrogen (<strong>TA-N</strong>).
+          </p>
+          <p>
+            Managing water-reuse systems expands the list to, at least, nitrate,
+            nitrite, calcium, magnesium, sodium, &amp; potassium.
+          </p>
+          <p>
+            The controls illustrated here define the
+            <span style="color: green; font-weight: 700"> Green Zone</span>
+            -- the region of a species' optimal growth &amp; survival.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Like a topographic map of pH</h3>
+        <img src="images/_00emptywqmap.png" alt="empty wq map" />
+        <div>
+          <h3>Like a topographic map of pH</h3>
+
+          <p>
+            <a
+              href="https://aquacalc.github.io/ph_ch1/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              pH is a "master variable"</a
+            >, but pH control alone is not enough to maintain a healthy culture
+            environment.
+          </p>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Both pH <em style="font-weight: 450">&amp;</em> alkalinity must
+              be managed for precise control</span
+            >
+            of aquaculture water chemistry.
+          </p>
+          <p>
+            This is at the core of the
+            <span class="wq-toolbox-highlight">WQ Map</span>: alkalinity is on
+            the <em>y</em>
+            -axis and lines of equal pH are projected onto the map surface.
+          </p>
+          <p>
+            The
+            <span class="realistic-marker-highlight"
+              >pH lines are like lines of equal elevation on a topographic
+              map</span
+            >: Where they're closer together, pH can change faster -- and that
+            means weaker buffering.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Plot your position on the map</h3>
+        <img src="images/_00wqmap.png" alt="Fifth image" />
+        <div>
+          <h3>Plot your position on the map</h3>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Entering pH &amp; alkalinity marks your culture water's
+              position</span
+            >
+            (for the system's temperature &amp; salinity) on the
+            <span class="wq-toolbox-highlight">WQ Map</span>.
+          </p>
+          <p style="margin-bottom: 0">
+            In this example, the blue pin
+            <i
+              class="fas fa-map-pin"
+              style="color: blue; font-size: 0.95rem"
+            ></i>
+            represents typical seawater values...
+          </p>
+          <ul style="margin-bottom: 0">
+            <li><span style="font-weight: 550">...pH 8.1</span></li>
+            <li>
+              <span style="font-weight: 550"
+                >...alkalinity 2.3 meq/kg (~115 ppm)</span
+              >
+            </li>
+          </ul>
+          <p style="margin-top: 3px">...at 25° C (77° F) &amp; 34.5‰.</p>
+          <p>
+            In terms of the Google Maps<sup><small>TM</small></sup> analogy,
+            this is <span class="realistic-marker-highlight"
+            >the starting point for your water-quality adjustments</span>.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Steer Clear of Danger</h3>
+        <img src="/images/_000dangerzones.png" alt="First image" />
+        <div>
+          <h3>Steer Clear of Danger</h3>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ Map</span> enhances
+            water-quality management by clearly
+            <span class="realistic-marker-highlight"
+              >displaying regions of sub-optimal culture conditions</span
+            >.
+          </p>
+          <p style="margin-bottom: 0">
+            Defining your species' critical requirements for...
+          </p>
+          <ul style="margin-bottom: 0">
+            <li>...un-ionized ammonia-nitrogen (<strong>UIA-N</strong>)</li>
+            <li>
+              ...carbon dioxide (<strong>CO<sub>2</sub></strong
+              >)
+            </li>
+          </ul>
+
+          <p style="margin: 0; margin-bottom: 3px">
+            ...and entering TA-N concentration overlays
+            <span style="color: red; font-weight: 550">Danger Zones</span> of:
+          </p>
+
+          <ul>
+            <li>
+              <span style="color: black; font-weight: 550"> high UIA-N </span>
+              (red area, upper left)
+            </li>
+            <li>
+              <span style="color: black; font-weight: 550">
+                high CO<sub>2</sub>
+              </span>
+              (red area, lower right)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">
+          The <span style="color: green">Green Zone</span>
+        </h3>
+        <img src="/images/_0withtarget.png" alt="First image" />
+        <div>
+          <h3>The <span style="color: green">Green Zone</span></h3>
+          <p>
+            Instead of plotting the
+            <span style="color: red; font-weight: 550"> Danger Zones</span>, it
+            generally is more informative to display the
+            <span style="color: green; font-weight: 700"> Green Zone</span>.
+          </p>
+          <p>
+            That's the region where the water chemistry of the culture
+            environment satisfies your species' growth &amp; survival
+            requirements.
+          </p>
+          <p>
+            Add the draggable target marker
+            <span>
+              <i
+                class="fas fa-map-marker-alt"
+                style="color: darkolivegreen; font-size: 0.95rem"
+              ></i>
+            </span>
+            to the map and
+            <span class="realistic-marker-highlight"
+              >your "water quality game" becomes making chemical
+              adjustments</span
+            >
+            that keep the target within the
+            <span style="color: green; font-weight: 700"> Green Zone</span>.
+          </p>
+        </div>
+      </section>
+
+      <!-- ******* Bicarb Only ******** -->
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">A Common Adjustment Mistake</h3>
+        <img src="/images/_16nabicarb.png" alt="bicarb additions" />
+        <div>
+          <h3>A Common Adjustment Mistake</h3>
+          <p>
+            When plotting a course for the
+            <span style="color: green; font-weight: 700"> Green Zone</span>,
+            many aquaculturists reach for
+            <span class="realistic-marker-highlight">sodium bicarbonate</span>
+            (baking soda, NaHCO<sub>3</sub>), but this
+            <span class="realistic-marker-highlight"
+              >almost never is sufficient by itself</span
+            >.
+          </p>
+          <p>
+            As illustrated for this case, adding only sodium bicarbonate follows
+            the
+            <span style="color: rgb(235, 154, 4); font-weight: bold"
+              >orange vector</span
+            >
+            from the initial WQ (<i
+              class="fas fa-map-pin"
+              style="color: red; font-size: 0.95rem"
+            ></i
+            >) toward the upper right --
+            <em
+              >and <span class="realistic-marker-highlight"
+              >this misses the
+              <span style="color: green; font-weight: 700"> Green Zone</span>
+              altogether</em
+            ></span>.
+          </p>
+          <p>
+            It also is the source some confusion: NaHCO<sub>3</sub> doesn't
+            change pH much within the pH range of most aquaculture. Here, 4.3 kg
+            (9.5 lb) increases pH only one-tenth of a unit: 6.8 to 6.9.
+          </p>
+        </div>
+      </section>
+
+      <!-- **************************** -->
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Getting Adjustment Directions</h3>
+        <img
+          src="/images/_00adjustments.png"
+          alt="First image"
+          style="width: 16.5rem; border: 0.5px solid gray"
+        />
+        <div>
+          <h3>Getting Adjustment Directions</h3>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ Map</span> solves this
+            problem: Chemical adjustment
+            <span class="realistic-marker-highlight"
+              >options that change water quality from the initial to the
+              target</span
+            >
+            point are displayed whenever the target marker
+            <span>
+              <i
+                class="fas fa-map-marker-alt"
+                style="color: darkolivegreen; font-size: 0.95rem"
+              ></i>
+            </span>
+            is set.
+          </p>
+          <p style="margin-bottom: 2px">
+            In this example, one of 15 options is...
+          </p>
+          <ul style="margin-bottom: 0">
+            <li>
+              ...3.31 kg of sodium carbonate (Na<sub>2</sub>CO<sub>3</sub>)
+            </li>
+            <li>...108.3 g of calcium hydroxide (Ca(OH)<sub>2</sub>)</li>
+          </ul>
+          <p>
+            Note that other reagents in the list -- CaCl<sub>2</sub>,
+            MgCl<sub>2</sub>, &amp; KCl -- <span class="realistic-marker-highlight"
+            >keep the major ionic ratios in
+            balance</span>.
+          </p>
+          <p>(Managing ionic ratios is addressed in a separate tutorial.)</p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">
+          Manage carbonate saturation (<strong>Ω</strong>)
+        </h3>
+        <img src="images/_00aragonite.png" alt="Third image" />
+        <div>
+          <h3>Manage carbonate saturation (<strong>Ω</strong>)</h3>
+
+          <p style="margin-bottom: 0">
+            The <span class="realistic-marker-highlight"
+            >saturation states of aragonite &amp; calcite</span> -- crystaline forms
+            of calcium carbonate -- partly determine...
+          </p>
+          <ul style="margin-bottom: 0">
+            <li>...the carapace integrity of shrimp</li>
+            <li>...healthy bones in fish</li>
+            <li>...the strength of sea urchin tests</li>
+          </ul>
+          <p>...as well as other water-chemistry concerns.</p>
+          <p>
+            <span class="realistic-marker-highlight"
+              >Despite its importance, many aquaculturists do not account for
+              <strong>Ω</strong> (omega)</span
+            >
+            in their WQ management program.
+          </p>
+          <p>
+            The <span class="wq-toolbox-highlight">WQ Map</span> resolves this
+            issue by integrating <strong>Ω</strong> into its routine
+            water-chemistry analysis.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-animate-card" data-aos="fade-up">
+        <h3 class="h3-above-img">Decrease production uncertainty</h3>
+        <img
+          src="images/_00feedingvector.png"
+          alt="Decrease production uncertainty"
+        />
+        <div>
+          <h3>Decrease production uncertainty</h3>
+          <p style="margin-bottom: 0">
+            The <span class="wq-toolbox-highlight">WQ Map</span> uses data you
+            already collect to
+            <span class="realistic-marker-highlight"
+              >forecast future water quality</span
+            >
+            resulting from...
+          </p>
+          <ul style="margin-bottom: 0">
+            <li>...feeding</li>
+            <li>...evaporation</li>
+            <li>...adding make-up water</li>
+            <li>...algal metabolism in IMTA systems</li>
+            <li>...organic carbon additions in biofloc systems</li>
+          </ul>
+          <p>
+            This helps producers
+            <span class="realistic-marker-highlight"
+              >anticipate problems before they occur</span
+            >, especially in high-density, warm-water RAS.
+          </p>
+        </div>
+      </section>
+
+      <div class="tzachi-book-link">
+        <p>
+          For a thorough introduction,
+          <a href="/index.html"><strong>request a demo</strong></a> and/or
+          <em>see:</em> Appendix V in
+          <a
+            href="https://www.amazon.com/Sustainable-Biofloc-Systems-Marine-Shrimp/dp/0128180404/ref=sr_1_1?dchild=1&keywords=samocha+biofloc&qid=1617745959&sr=8-1&asin=B07WVBXQ1S&revisionId=&format=2&depth=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><strong>Tzachi Samocha's biofloc book</strong></a
+          >.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <article>
+        <nav>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About...</a></li>
+            <!-- <li>
+              <a class="selectedNavMenu" href="scroll-animate.html">Docs</a>
+            </li> -->
+          </ul>
+        </nav>
+      </article>
+      <p>&copy; 2022 --Nick/ Staresinic</p>
+    </footer>
+
+    <svg
+      xmlns="//www.w3.org/2000/svg"
+      version="1.1"
+      class="svg-filters"
+      style="display: none"
+    >
+      <defs>
+        <filter id="marker-shape">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0 0.15"
+            numOctaves="1"
+            result="warp"
+          />
+          <feDisplacementMap
+            xChannelSelector="R"
+            yChannelSelector="G"
+            scale="30"
+            in="SourceGraphic"
+            in2="warp"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- see: https://github.com/michalsnik/aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // offset: 140,
+        duration: 650,
+      });
+    </script>
+  </body>
+</html>
